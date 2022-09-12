@@ -1,0 +1,644 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" itemscope="" itemtype="http://schema.org/WebPage">
+
+<!-- Mirrored from sites.google.com/site/prologsite/prolog-problems/4 by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 12 Sep 2022 18:37:15 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="chrome=1" />
+<script type="text/javascript">/* Copyright 2008 Google. */ (function() { /*
+
+Copyright The Closure Library Authors.
+SPDX-License-Identifier: Apache-2.0
+*/
+(function(){function e(g){this.t={};this.tick=function(h,k,f){this.t[h]=[void 0!=f?f:(new Date).getTime(),k];if(void 0==f)try{window.console.timeStamp("CSI/"+h)}catch(m){}};this.getStartTickTime=function(){return this.t.start[0]};this.tick("start",null,g)}var a;if(window.performance)var d=(a=window.performance.timing)&&a.responseStart;var l=0<d?new e(d):new e;window.jstiming={Timer:e,load:l};if(a){var b=a.navigationStart;0<b&&d>=b&&(window.jstiming.srt=d-b)}if(a){var c=window.jstiming.load;0<b&&d>=
+b&&(c.tick("_wtsrt",void 0,b),c.tick("wtsrt_","_wtsrt",d),c.tick("tbsd_","wtsrt_"))}try{a=null,window.chrome&&window.chrome.csi&&(a=Math.floor(window.chrome.csi().pageT),c&&0<b&&(c.tick("_tbnd",void 0,window.chrome.csi().startE),c.tick("tbnd_","_tbnd",b))),null==a&&window.gtbExternal&&(a=window.gtbExternal.pageT()),null==a&&window.external&&(a=window.external.pageT,c&&0<b&&(c.tick("_tbnd",void 0,window.external.startE),c.tick("tbnd_","_tbnd",b))),a&&(window.jstiming.pt=a)}catch(g){}})(); })()
+</script>
+<link rel="shortcut icon" href="https://f93da235-a-62cb3a1a-s-sites.googlegroups.com/site/prologsite/favicon.ico?attachauth=ANoY7cq2Qe7SC69SulHNyg_hGTdHvEsMqPylnfIrkl5lDg0IdA1zHWjP-1U_qIc2BdYL8Y967JCbOSzlirg8OKg9pg8LaWwIkNqp7MCysIRz4USB0GkJftURvxMzw0qflG2P2Tqn7l19x2jLm3bCOrHsTcdhMGBA7cHI1x4JgjHES2yYLzkuNlch5XwiqlJG4DjknH3bG_QU-Lftq5rBff4o9ZHzAxFqxA%3D%3D&amp;attredirects=0" type="image/x-icon" />
+<link rel="apple-touch-icon" href="../../../../ssl.gstatic.com/sites/p/954e25/system/app/images/apple-touch-icon.png" type="image/png" />
+<script type="text/javascript">/* Copyright 2008 Google. */ (function() { function d(a){return document.getElementById(a)}window.byId=d;function g(a){return a.replace(/^\s+|\s+$/g,"")}window.trim=g;var h=[],k=0;window.JOT_addListener=function(a,b,c){var f=new String(k++);a={eventName:a,handler:b,compId:c,key:f};h.push(a);return f};window.JOT_removeListenerByKey=function(a){for(var b=0;b<h.length;b++)if(h[b].key==a){h.splice(b,1);break}};window.JOT_removeAllListenersForName=function(a){for(var b=0;b<h.length;b++)h[b].eventName==a&&h.splice(b,1)};
+window.JOT_postEvent=function(a,b,c){var f={eventName:a,eventSrc:b||{},payload:c||{}};if(window.JOT_fullyLoaded)for(b=h.length,c=0;c<b&&c<h.length;c++){var e=h[c];e&&e.eventName==a&&(f.listenerCompId=e.compId||"",(e="function"==typeof e.handler?e.handler:window[e.handler])&&e(f))}else window.JOT_delayedEvents.push({eventName:a,eventSrc:b,payload:c})};window.JOT_delayedEvents=[];window.JOT_fullyLoaded=!1;
+window.JOT_formatRelativeToNow=function(a,b){a=((new Date).getTime()-a)/6E4;if(1440<=a||0>a)return null;var c=0;60<=a&&(a/=60,c=2);2<=a&&c++;return b?window.JOT_siteRelTimeStrs[c].replace("__duration__",Math.floor(a)):window.JOT_userRelTimeStrs[c].replace("__duration__",Math.floor(a))}; })()
+</script>
+<script>
+
+  
+
+  var breadcrumbs = [{"path":"/site/prologsite/prolog-problems","deleted":false,"title":"Prolog Problems","dir":"ltr"},{"path":"/site/prologsite/prolog-problems/4","deleted":false,"title":"4. Binary Trees","dir":"ltr"}];
+  var JOT_clearDotPath = '../../../../ssl.gstatic.com/sites/p/954e25/system/app/images/cleardot.gif';
+
+  
+  var JOT_userRelTimeStrs = ["um minuto atr\u00e1s","__duration__ minutos atr\u00e1s","uma hora atr\u00e1s","h\u00e1 __duration__ horas"];
+
+  
+  
+
+  
+
+  var webspace = {"gvizGstaticVersion":"current","enableAnalytics":false,"pageSharingId":"jotspot_page","codeembeds":{"outerIframeSrc":"https://www.gstatic.com/jotspot/embeds/code/0f08d42392f2000e7e3f3daf5b427a43/outer_iframe.html","innerIframeSrc":"https://1110847359-jotspot-embeds.googleusercontent.com/code/8d87fa64604b2a11fae2ed06104c58d3/inner_iframe.html"},"enableUniversalAnalytics":false,"sharingPolicy":"OPENED","siteTitle":"Prolog Site","experiments":{"enableSubpagesGadgetInTakeout":true,"overrideDisableDomainEditing":false,"DisableSiteEditingFeature__disable_site_editing":true,"disableDomainEditing":true},"jot2atari":{"eligibility":"INELIGIBLE"},"onepickUrl":"https://docs.google.com/picker","adsensePublisherId":null,"features":{"moreMobileStyleImprovements":null,"subscriptionDataMigrationInProgress":null,"plusBadge":false},"configProperties":{"disableSiteEditing":null},"isPublic":true,"newSitesBaseUrl":"https://sites.google.com","isConsumer":true,"serverFlags":{"jot2AtariLearnMoreUrl":"https://support.google.com/sites/answer/7035197"},"domainAnalyticsAccountId":"","plusPageId":"","signInUrl":"https://accounts.google.com/AccountChooser?continue=https://sites.google.com/site/prologsite/prolog-problems/4&service=jotspot","analyticsAccountId":"","scottyUrl":"/_/upload","homePath":"/","siteNoticeUrlEnabled":null,"plusPageUrl":"","adsensePromoClickedOrSiteIneligible":true,"csiReportUri":"https://gg.google.com/csi","sharingId":"jotspot","termsUrl":"//www.google.com/intl/pt/policies/terms/","gvizVersion":1,"editorResources":{"sitelayout":["https://ssl.gstatic.com/sites/p/954e25/system/app/css/sitelayouteditor.css"],"text":["https://ssl.gstatic.com/sites/p/954e25/system/js/codemirror.js","../../../../ssl.gstatic.com/sites/p/954e25/system/app/css/codemirror_css.css","../../../../ssl.gstatic.com/sites/p/954e25/system/js/trog_edit__pt_br.js","../../../../ssl.gstatic.com/sites/p/954e25/system/app/css/trogedit.css","../_/rsrc/1662018100000/system/app/css/editor.css","../../../../ssl.gstatic.com/sites/p/954e25/system/app/css/codeeditor.css","/site/prologsite/_/rsrc/1662018100000/system/app/css/camelot/editor-jfk.css"]},"sharingUrlPrefix":"/_/sharing","isAdsenseEnabled":true,"domain":"defaultdomain","baseUri":"/site/prologsite","name":"prologsite","siteTemplateId":false,"siteNoticeRevision":null,"siteNoticeUrlAddress":null,"siteNoticeMessage":null,"page":{"isRtlLocale":false,"canDeleteWebspace":null,"isPageDraft":null,"parentPath":"/prolog-problems","parentWuid":"wuid:gx:759ecda8d60e3a1c","siteLocale":"en","timeZone":"America/Los_Angeles","type":"text","title":"4. Binary Trees","locale":"pt_BR","wuid":"wuid:gx:ea7f9e6f5084d18","revision":18,"path":"/prolog-problems/4","isSiteRtlLocale":false,"pageInheritsPermissions":null,"name":"4","canChangePath":true,"state":"","properties":{},"bidiEnabled":false,"currentTemplate":{"path":"/system/app/pagetemplates/text","title":"P\u00e1gina da web"}},"canPublishScriptToAnyone":true,"user":{"keyboardShortcuts":true,"sessionIndex":"","guest_":true,"displayNameOrEmail":"guest","userName":"guest","uid":"","renderMobile":false,"domain":"","namespace":"","hasWriteAccess":false,"namespaceUser":false,"primaryEmail":"guest","hasAdminAccess":false,"isGoogleAdmin":false},"gadgets":{"baseUri":"/site/prologsite/system/app/pages/gadgets"}};
+  webspace.page.breadcrumbs = breadcrumbs;
+
+  
+  var JOT_siteRelTimeStrs = ["a minute ago","__duration__ minutes ago","an hour ago","__duration__ hours ago"];
+
+</script>
+<script type="text/javascript">
+                window.jstiming.load.tick('scl');
+              </script>
+<meta name="title" content="4. Binary Trees - Prolog Site" />
+<meta itemprop="name" content="4. Binary Trees - Prolog Site" />
+<meta property="og:title" content="4. Binary Trees - Prolog Site" />
+<meta name="description" content="This site hosts a Prolog course and a collection of Prolog problems" />
+<meta itemprop="description" content="This site hosts a Prolog course and a collection of Prolog problems" />
+<meta id="meta-tag-description" property="og:description" content="This site hosts a Prolog course and a collection of Prolog problems" />
+<style type="text/css">
+</style>
+<link rel="stylesheet" type="text/css" href="../../../../ssl.gstatic.com/sites/p/954e25/system/app/themes/microsport/standard-css-microsport-ltr-ltr.css" />
+<link rel="stylesheet" type="text/css" href="../_/rsrc/1662018100000/system/app/css/overlay6fb2.css?cb=microsport160goog-ws-left" />
+<link rel="stylesheet" type="text/css" href="../_/rsrc/1662018100000/system/app/css/camelot/allthemes-view.css" />
+<!--[if IE]>
+          <link rel="stylesheet" type="text/css" href="/site/prologsite/system/app/css/camelot/allthemes%2die.css" />
+        <![endif]-->
+<title>4. Binary Trees - Prolog Site</title>
+<meta itemprop="image" content="https://sites.google.com/site/prologsite/_/rsrc/1264864357592/home/prolog-program.gif" />
+<meta property="og:image" content="https://sites.google.com/site/prologsite/_/rsrc/1264864357592/home/prolog-program.gif" />
+<script type="text/javascript">
+                window.jstiming.load.tick('cl');
+              </script>
+</head>
+<body xmlns="http://www.google.com/ns/jotspot" id="body" class=" en            ">
+<div id="sites-page-toolbar" class="sites-header-divider">
+<div xmlns="http://www.w3.org/1999/xhtml" id="sites-status" class="sites-status" style="display:none;"><div id="sites-notice" class="sites-notice" role="status" aria-live="assertive"> </div></div>
+</div>
+<div id="sites-chrome-everything-scrollbar">
+<div id="sites-chrome-everything" class="">
+<div id="sites-chrome-page-wrapper" style="direction: ltr">
+<div id="sites-chrome-page-wrapper-inside">
+<div xmlns="http://www.w3.org/1999/xhtml" id="sites-chrome-header-wrapper" style="">
+<table id="sites-chrome-header" class="sites-layout-hbox" cellspacing="0" style="">
+<tr class="sites-header-primary-row" id="sites-chrome-userheader">
+<td id="sites-header-title" class="" role="banner"><div class="sites-header-cell-buffer-wrapper"><h2><a href="../index.html" dir="ltr" id="sites-chrome-userheader-title">Prolog Site</a></h2></div></td><td class="sites-layout-searchbox  "><div class="sites-header-cell-buffer-wrapper"><form id="sites-searchbox-form" action="https://sites.google.com/site/prologsite/system/app/pages/search" role="search"><input type="hidden" id="sites-searchbox-scope" name="scope" value="search-site" /><input type="text" id="jot-ui-searchInput" name="q" size="20" value="" aria-label="Search this site" /><div id="sites-searchbox-button-set" class="goog-inline-block"><div role="button" id="sites-searchbox-search-button" class="goog-inline-block jfk-button jfk-button-standard" tabindex="0">Search this site</div></div></form></div></td>
+</tr>
+<tr class="sites-header-secondary-row" id="sites-chrome-horizontal-nav">
+<td colspan="2" id="sites-chrome-header-horizontal-nav-container" role="navigation">
+</td>
+</tr>
+</table>
+</div>
+<div id="sites-chrome-main-wrapper">
+<div id="sites-chrome-main-wrapper-inside">
+<table id="sites-chrome-main" class="sites-layout-hbox" cellspacing="0" cellpadding="{scmCellpadding}" border="0">
+<tr>
+<td id="sites-chrome-sidebar-left" class="sites-layout-sidebar-left initial" style="width:160px">
+<div xmlns="http://www.w3.org/1999/xhtml" id="COMP_2bd" class="sites-embed" role="navigation"><div class="sites-embed-content sites-sidebar-nav"><ul role="navigation" jotId="navList" class="has-expander"><li class="topLevel nav-first "><div dir="ltr" style="padding-left: 19px;"><a href="../home.html" jotId="wuid:gx:341db5a4ed00d1a" class="sites-navigation-link topLevel">Home</a></div></li><li class="topLevel "><div dir="ltr" style="padding-left: 19px;"><a href="../author.html" jotId="wuid:gx:3c9b6b2f3738ce0f" class="sites-navigation-link topLevel">Author</a></div></li><li class="topLevel parent " wuid="gx:62780df045cbf614"><div dir="ltr" style="padding-left: 0px;"><div class="expander"></div><a href="../prolog-course.html" jotId="wuid:gx:62780df045cbf614" class="sites-navigation-link topLevel">Prolog Course</a></div><ul role="navigation" class="has-expander"><li class=""><div dir="ltr" style="padding-left: 38px;"><a href="../prolog-course/a-first-glimpse.html" jotId="wuid:gx:4ff2cf368f81ba6" class="sites-navigation-link">1. A First Glimpse</a></div></li><li class=""><div dir="ltr" style="padding-left: 38px;"><a href="../prolog-course/2-synrtax-and-meaning.html" jotId="wuid:gx:5e15c00eb05443c6" class="sites-navigation-link">2. Syntax and Meaning</a></div></li></ul></li><li class="topLevel parent " wuid="gx:759ecda8d60e3a1c"><div dir="ltr" style="padding-left: 0px;"><div class="expander"></div><a href="../prolog-problems.html" jotId="wuid:gx:759ecda8d60e3a1c" class="sites-navigation-link topLevel">Prolog Problems</a></div><ul role="navigation" class="has-expander"><li class=""><div dir="ltr" style="padding-left: 38px;"><a href="1.html" jotId="wuid:gx:6727b95992b8c5a3" class="sites-navigation-link">1. Prolog Lists</a></div></li><li class=""><div dir="ltr" style="padding-left: 38px;"><a href="2.html" jotId="wuid:gx:104b11b6fc852518" class="sites-navigation-link">2. Arithmetic</a></div></li><li class=""><div dir="ltr" style="padding-left: 38px;"><a href="3.html" jotId="wuid:gx:533d8f77d8d861bd" class="sites-navigation-link">3. Logic and Codes</a></div></li><li class=""><div class="current-bg" jotId="wuid:gx:ea7f9e6f5084d18" dir="ltr" style="padding-left: 38px;">4. Binary Trees</div></li><li class=""><div dir="ltr" style="padding-left: 38px;"><a href="5.html" jotId="wuid:gx:16e5055a13f4667a" class="sites-navigation-link">5. Multiway Trees</a></div></li><li class=""><div dir="ltr" style="padding-left: 38px;"><a href="6.html" jotId="wuid:gx:145fd6273058e53b" class="sites-navigation-link">6. Graphs</a></div></li><li class=""><div dir="ltr" style="padding-left: 38px;"><a href="7.html" jotId="wuid:gx:362ab8a32fd7639a" class="sites-navigation-link">7. Miscellaneous</a></div></li></ul></li><li class="topLevel "><div dir="ltr" style="padding-left: 19px;"><a href="../system/app/pages/sitemap/hierarchy.html" jotId="wuid:gx:79311e19ba5ac357" class="sites-navigation-link topLevel">Sitemap</a></div></li></ul></div></div>
+</td>
+<td id="sites-canvas-wrapper">
+<div id="sites-canvas" role="main">
+<div id="goog-ws-editor-toolbar-container"> </div>
+<div xmlns="http://www.w3.org/1999/xhtml" id="title-crumbs" style="">
+<A href="../prolog-problems.html" dir="ltr">Prolog Problems</A>‎ &gt; ‎
+  </div>
+<h3 xmlns="http://www.w3.org/1999/xhtml" id="sites-page-title-header" style="" align="left">
+<span id="sites-page-title" dir="ltr" tabindex="-1" style="outline: none">4. Binary Trees</span>
+</h3>
+<div id="sites-canvas-main" class="sites-canvas-main">
+<div id="sites-canvas-main-content">
+<table xmlns="http://www.w3.org/1999/xhtml" cellspacing="0" class="sites-layout-name-one-column sites-layout-hbox"><tbody><tr><td class="sites-layout-tile sites-tile-name-content-1"><div dir="ltr"><div style="margin:5px 10px 0pt 0pt;display:inline;float:left"><a href="4/solutions-4.html" rel="nofollow"><img border="0" src="../_/rsrc/1264864357592/home/prolog-program.gif" /></a></div>
+<br />
+<b>Solutions can be found 
+<a href="4/solutions-4.html" rel="nofollow">here</a>.<br />
+</b>
+<br />
+<div style="margin:5px 10px 0pt 0pt;display:inline;float:left"><a href="../../../../f93da235-a-62cb3a1a-s-sites.googlegroups.com/site/prologsite/prolog-problems/4/p676487.gif?attredirects=0" imageanchor="1"><img border="0" src="../_/rsrc/1264934442609/prolog-problems/4/p67.gif" /></a></div>
+<b>A binary tree is either empty or it is composed of a root
+element and two successors, which are binary trees themselves.</b><br />
+
+In Prolog we represent the empty tree by the atom 'nil' and the 
+non-empty tree by the term t(X,L,R), where X denotes the root 
+node and L and R denote the left and right subtree, respectively.
+The example tree depicted opposite is therefore represented by the 
+following Prolog term: <br />
+<br />
+T1 = t(a,t(b,t(d,nil,nil),t(e,nil,nil)),t(c,nil,t(f,t(g,nil,nil),nil)))
+<br />
+<br />
+Other examples are a binary tree that consists of a root node only:<br />
+<br />
+T2 = t(a,nil,nil) or an empty binary tree: T3 = nil
+<br />
+<br />
+<dl>
+<dt><b>4.01 
+   (*) Check whether a given term represents a binary tree</b>
+</dt>
+<dd>Write a predicate istree/1 which succeeds if and only if its argument
+        is a Prolog term representing a binary tree.<br />
+	Example:<br />
+	?- istree(t(a,t(b,nil,nil),nil)).<br />
+        Yes<br />
+	?- istree(t(a,t(b,nil,nil))).<br />
+        No<br />
+<br />
+</dd>
+<dt><b>4.02
+   (**) Construct completely balanced binary trees</b>
+</dt>
+<dd>In a completely balanced binary tree, the following property holds for
+	every node: The number of nodes in its left subtree and the number of 
+	nodes in its right subtree are almost equal, which means their
+	difference is not greater than one.<br />
+<br />
+	Write a predicate cbal_tree/2 to construct completely balanced
+	binary trees for a given number of nodes. The predicate should
+	generate all solutions via backtracking. Put the letter 'x'
+	as information into all nodes of the tree.<br />
+	Example:<br />
+	?- cbal_tree(4,T).<br />
+	T = t(x, t(x, nil, nil), t(x, nil, t(x, nil, nil))) ;<br />
+	T = t(x, t(x, nil, nil), t(x, t(x, nil, nil), nil)) ;<br />
+	etc......No<br />
+<br />
+</dd>
+<dt><b>4.03
+   (**) Symmetric binary trees</b>
+</dt>
+<dd>Let us call a binary tree symmetric if you can draw a vertical
+	line through the root node and then the right subtree is the mirror
+	image of the left subtree.
+	Write a predicate symmetric/1 to check whether a given binary
+	tree is symmetric. <b>Hint:</b> 
+	Write a predicate mirror/2 first to
+	check whether one tree is the mirror image of another.
+	We are only interested in the structure, not in the contents 
+	of the nodes.<br />
+<br />
+</dd>
+<dt><b>4.04
+   (**) Binary search trees (dictionaries)</b>
+</dt>
+<dd>Use the predicate add/3, developed in chapter 4 of the course,
+	to write a predicate to construct a binary search tree 
+	from a list of integer numbers.<br />
+	Example:<br />
+	?- construct([3,2,5,7,1],T).<br />
+	T = t(3, t(2, t(1, nil, nil), nil), t(5, nil, t(7, nil, nil)))<br />
+<br />
+	Then use this predicate to test the solution of the problem P56.<br />
+ 	Example:<br />
+	?- test_symmetric([5,3,18,1,4,12,21]).<br />
+	Yes<br />
+	?- test_symmetric([3,2,5,7,4]).<br />
+	No<br />
+<br />
+</dd>
+<dt><b>4.05
+   (**) Generate-and-test paradigm</b>
+</dt>
+<dd>Apply the generate-and-test paradigm to construct all symmetric,
+	completely balanced binary trees with a given number of nodes.
+	Example:<br />
+	?- sym_cbal_trees(5,Ts).<br />
+	Ts = [t(x, t(x, nil, t(x, nil, nil)), t(x, t(x, nil, nil), nil)), 
+	t(x, t(x, t(x, nil, nil), nil), t(x, nil, t(x, nil, nil)))] 
+	<br />
+<br />
+	How many such trees are there with 57 nodes? Investigate about
+	how many solutions there are for a given number of nodes? What if
+	the number is even? Write an appropriate predicate.<br />
+<br />
+</dd>
+<dt><b>4.06
+   (**) Construct height-balanced binary trees</b>
+</dt>
+<dd>In a height-balanced binary tree, the following property holds for
+	every node: The height of its left subtree and the height of  
+	its right subtree are almost equal, which means their
+	difference is not greater than one.<br />
+<br />
+	Write a predicate hbal_tree/2 to construct height-balanced
+	binary trees for a given height. The predicate should
+	generate all solutions via backtracking. Put the letter 'x'
+	as information into all nodes of the tree.<br />
+	Example:<br />
+	?- hbal_tree(3,T).<br />
+	T = t(x, t(x, t(x, nil, nil), t(x, nil, nil)), t(x, t(x, nil, nil), 
+	t(x, nil, nil))) ;<br />
+        T = t(x, t(x, t(x, nil, nil), t(x, nil, nil)), t(x, t(x, nil, nil),
+	nil)) ;<br />
+     
+	etc......No<br />
+<br />
+</dd>
+<dt><b>4.07
+   (**) Construct height-balanced binary trees with a given number of nodes</b>
+</dt>
+<dd>Consider a height-balanced binary tree of height H. What is the 
+	maximum number of nodes it can contain?<br />
+Clearly, MaxN = 2**H - 1.
+	However, what is the minimum number MinN? This question is more
+	difficult. Try to find a recursive statement and turn it into a
+	predicate minNodes/2 defined as follwos:<br />
+<br />
+	% minNodes(H,N) :- N is the minimum number of nodes in a 
+	height-balanced binary tree of height H.<br />
+        (integer,integer), (+,?)<br />
+<br />
+	On the other hand, we might ask: what is the maximum height H a
+	height-balanced binary tree with N nodes can have?<br />
+<br />
+	% maxHeight(N,H) :- H is the maximum height of a height-balanced 
+        binary tree with N nodes<br />
+        (integer,integer), (+,?)<br />
+<br />
+	Now, we can attack the main problem: construct all the 
+	height-balanced binary trees with a given nuber of nodes.<br />
+<br />
+	% hbal_tree_nodes(N,T) :- T is a height-balanced binary tree with
+	N nodes.<br />
+<br />
+	Find out how many height-balanced trees exist for N = 15.<br />
+<br />
+</dd>
+<dt><b>4.08
+   (*) Count the leaves of a binary tree</b>
+</dt>
+<dd>A leaf is a node with no successors. Write a predicate 
+	count_leaves/2 to count them.
+        <br />
+<br />
+	% count_leaves(T,N) :- the binary tree T has N leaves
+	<br />
+<br />
+</dd>
+<dt><b>4.09 
+   (*) Collect the leaves of a binary tree in a list</b>
+</dt>
+<dd>A leaf is a node with no successors. Write a predicate 
+	leaves/2 to collect them in a list.
+        <br />
+<br />
+	% leaves(T,S) :- S is the list of all leaves of the binary tree T 
+	<br />
+<br />
+</dd>
+<dt><b>4.10
+   (*) Collect the internal nodes of a binary tree in a list</b>
+</dt>
+<dd>An internal node of a binary tree has either one or two non-empty
+	successors. Write a predicate internals/2 to collect 
+        them in a list.
+        <br />
+<br />
+	% internals(T,S) :- S is the list of internal nodes of
+        the binary tree T.
+	<br />
+<br />
+</dd>
+<dt><b>4.11 
+   (*) Collect the nodes at a given level in a list</b>
+</dt>
+<dd>A node of a binary tree is at level N if the path from the
+       root to the node has length N-1. The root node is at level 1.
+       Write a predicate atlevel/3 to collect all nodes at a given
+       level in a list.
+        <br />
+<br />
+	% atlevel(T,L,S) :- S is the list of nodes of the binary tree
+        T at level L<br />
+<br />
+        Using atlevel/3 it is easy to construct a predicate levelorder/2
+        which creates the level-order sequence of the nodes. However,
+        there are more efficient ways to do that.
+	<br />
+<br />
+</dd>
+<dt><b>4.12
+   (**) Construct a complete binary tree</b>
+</dt>
+<dd>A <i>complete</i> binary tree with height H is 
+	defined as follows: The levels 1,2,3,...,H-1 contain the 
+        maximum number of nodes (i.e 2**(i-1) at the level i, note 
+	that we start counting the levels from 1 at the root). 
+	In level H, which may contain less than the maximum possible number
+	of nodes, all the nodes are "left-adjusted". This means
+	that in a levelorder tree traversal all internal nodes come
+	first, the leaves come second, and empty successors (the nil's
+	which are not really nodes!) come last.<br />
+<br />
+	Particularly, complete binary trees are used as data structures
+        (or addressing schemes) for heaps.<br />
+<br />
+	We can assign an address number to each node in a complete
+	binary tree by enumerating the nodes in levelorder, starting
+	at the root with number 1. In doing so, we realize that for
+	every node X with address A the following property holds:
+	The address of X's left and right successors are 2*A and 2*A+1,
+	respectively, supposed the successors do exist. This fact can
+	be used to elegantly construct a complete binary tree structure.
+	Write a predicate complete_binary_tree/2 with the following
+	specification:
+	<br />
+<br />
+	% complete_binary_tree(N,T) :- T is a complete binary tree with
+	N nodes. (+,?)<br />
+<br />
+	Test your predicate in an appropriate way.<br />
+<br />
+</dd>
+<dt><b>4.13
+   (**) Layout a binary tree (1)</b>
+</dt>
+<dd> Given a binary tree as the usual Prolog term t(X,L,R) (or nil).
+        As a preparation for drawing the tree, a layout algorithm is
+        required to determine the position of each node in a rectangular
+        grid. Several layout methods are conceivable, one of them is
+        shown in the illustration below.<br />
+<br />
+<div style="margin:5px auto 0pt;display:block;text-align:center"><a href="../../../../f93da235-a-62cb3a1a-s-sites.googlegroups.com/site/prologsite/prolog-problems/4/p648495.gif?attredirects=0" imageanchor="1"><img border="0" src="../_/rsrc/1264933989828/prolog-problems/4/p64.gif" /></a></div>
+</dd>
+<dd><br />
+</dd>
+<dd>In this layout strategy, the position of a node <i>v</i> 
+        is obtained by the following two rules:<br />
+</dd>
+</dl>
+<ul style="margin-left:40px"><li><i>x(v)</i> is equal to the position of the node <i>v</i>
+              in the <b>inorder</b><br />
+</li>
+<li><i>y(v)</i> is equal to the depth of the node <i>v</i> in
+              the tree<br />
+ sequence</li>
+</ul>
+<dl><dd>In order to store the position of the nodes, we extend the Prolog 
+        term representing a node (and its successors) as follows: </dd>
+<dd><br />
+        % nil represents the empty tree (as usual)<br />
+	    % t(W,X,Y,L,R) represents a (non-empty) binary tree with root
+        W "positioned" at (X,Y), and subtrees L and R
+
+
+
+<br />
+
+	Write a predicate layout_binary_tree/2 with the following
+	specification:
+	<br />
+<br />
+	% layout_binary_tree(T,PT) :- PT is the "positioned" binary
+        tree obtained from the binary tree T. (+,?)<br />
+<br />
+
+	Test your predicate in an appropriate way. 
+        <br />
+<br />
+<br />
+</dd>
+<dt><b>4.14
+   (**) Layout a binary tree (2)</b>
+</dt>
+<dd>
+<div style="display:block;text-align:center;margin-right:auto;margin-left:auto"><a href="../../../../f93da235-a-62cb3a1a-s-sites.googlegroups.com/site/prologsite/prolog-problems/4/p650b4d.gif?attredirects=0" imageanchor="1"><img border="0" src="../_/rsrc/1264934255598/prolog-problems/4/p65.gif" /></a></div>
+</dd>
+<dd><br />
+</dd>
+<dd>An alternative layout method is depicted in the above illustration. Find out the rules and write the corresponding
+        Prolog predicate. Hint: On a given level, the horizontal
+        distance between neighboring nodes is constant.<br />
+<br />
+        Use the same conventions as in problem 4.13 and test your 
+        predicate in an appropriate way.
+        <br />
+<br />
+<br />
+</dd>
+<dt><b>4.15
+   (***) Layout a binary tree (3)</b>
+</dt>
+<dd>
+<div style="display:block;text-align:center;margin-right:auto;margin-left:auto"><a href="../../../../f93da235-a-62cb3a1a-s-sites.googlegroups.com/site/prologsite/prolog-problems/4/p6606ac.gif?attredirects=0" imageanchor="1"><img border="0" src="../_/rsrc/1264934330462/prolog-problems/4/p66.gif" /></a></div>
+</dd>
+<dd><br />
+</dd>
+<dd>Yet another layout strategy is shown in the above illustration. The method yields a very compact layout while 
+        maintaining a certain symmetry in every node. Find out 
+        the rules and write the corresponding Prolog predicate.
+        Hint: Consider the horizontal distance between a node and its
+        successor nodes. How tight can you pack together two subtrees to
+        construct the combined binary tree?<br />
+<br />
+        Use the same conventions as in problem 4.13 and 4.14 and 
+        test your predicate in an appropriate way. Note: This is
+        a difficult problem. Don't give up too early!<br />
+<br />
+        Which layout do you like most?
+        <br />
+<br />
+<br />
+</dd>
+<dt><b>4.16
+   (**) A string representation of binary trees</b><br />
+</dt>
+<dd><br />
+</dd>
+<dd>
+<div style="margin:5px 10px 0pt 0pt;display:inline;float:left"><a href="../../../../f93da235-a-62cb3a1a-s-sites.googlegroups.com/site/prologsite/prolog-problems/4/p676487.gif?attredirects=0" imageanchor="1"><img border="0" src="../_/rsrc/1264934442609/prolog-problems/4/p67.gif" /></a></div>
+Somebody represents binary trees as strings of the
+       following type (see example):<br />
+<br />
+       a(b(d,e),c(,f(g,)))<br />
+<br />
+<b>a</b>
+       Write a Prolog predicate which generates this string
+       representation, if the tree is given as usual (as nil or 
+       t(X,L,R) term). Then write a predicate which does 
+       this inverse; i.e. given the string representation, 
+       construct the tree in the usual form. Finally, combine the 
+       two predicates in a single predicate tree_string/2 which 
+       can be used in both directions.<br />
+<br />
+<b>b)</b>
+       Write the same predicate tree_string/2 using difference lists
+       and a single predicate tree_dlist/2 which does the conversion 
+       between a tree and a difference list in both directions.<br />
+<br />
+       For simplicity, suppose the information in the nodes is a single 
+       letter and there are no spaces in the string.
+       <br />
+<br />
+<br />
+</dd>
+<dt><b>4.17
+   (**) Preorder and inorder sequences of binary trees</b></dt>
+<dd><br />
+</dd>
+<dd>We consider binary trees with nodes that are identified by
+       single lower-case letters, as in the example of problem 4.16.<br />
+<br />
+<b>a)</b>
+        Write predicates preorder/2 and inorder/2 that construct
+       the preorder and inorder sequence of a given binary tree, 
+       respectively. The results should be atoms, e.g. 'abdecfg' 
+       for the preorder sequence of the example in problem 4.16.<br />
+<br />
+<b>b)</b>
+       Can you use preorder/2 from problem part a) in the reverse
+       direction; i.e. given a preorder sequence, construct a 
+       corresponding tree? If not, make the necessary arrangements.<br />
+<br />
+<b>c)</b>
+       If both the preorder sequence and the inorder sequence of
+       the nodes of a binary tree are given, then the tree is determined
+       unambiguously. Write a predicate pre_in_tree/3 that does 
+       the job.<br />
+<br />
+<b>d)</b>
+       Solve problems a) to c) using difference lists. Cool! Use the
+       predefined predicate time/1 to compare the solutions.<br />
+<br />
+       What happens if the same character appears in more than one node.
+       Try for instance pre_in_tree(aba,baa,T).    
+       <br />
+<br />
+</dd>
+<dt><b>4.18
+   (**) Dotstring representation of binary trees</b>
+</dt>
+<dd>We consider again binary trees with nodes that are identified by
+       single lower-case letters, as in the example of problem 4.16. Such a
+       tree can be represented by the preorder sequence of its nodes in which
+       dots (.) are inserted where an empty subtree (nil) is encountered
+       during the tree traversal. For example, the tree shown in problem 4.16
+       is represented as <tt>'abd..e..c.fg...'</tt>. First, try to establish a 
+       syntax (BNF or syntax diagrams) and then write a predicate
+       tree_dotstring/2 which does the conversion in both directions. 
+       Use difference lists.
+       <br />
+<br />
+</dd>
+</dl>
+</div></td></tr></tbody></table>
+</div> 
+</div> 
+<div id="sites-canvas-bottom-panel">
+<div xmlns="http://www.w3.org/1999/xhtml" id="COMP_page-subpages" class="sites-canvas-bottom-panel-wrapper" style="">
+<div class="sites-subpages">
+            Subpages <span id="subpages-total-number">(1):</span>
+<span>
+<a href="4/solutions-4.html" dir="ltr">Solutions-4</a>
+</span>
+</div>
+</div>
+<div id="sites-attachments-container">
+</div>
+</div>
+</div> 
+</td> 
+</tr>
+</table> 
+</div> 
+</div> 
+<div id="sites-chrome-footer-wrapper">
+<div id="sites-chrome-footer-wrapper-inside">
+<div id="sites-chrome-footer">
+</div>
+</div>
+</div>
+</div> 
+</div> 
+<div id="sites-chrome-adminfooter-container">
+<div xmlns="http://www.w3.org/1999/xhtml" class="sites-adminfooter" role="navigation"><p><a class="sites-system-link" href="https://accounts.google.com/ServiceLogin?continue=https://sites.google.com/site/prologsite/prolog-problems/4&amp;service=jotspot">Fazer login</a><span aria-hidden="true">|</span><a class="sites-system-link" href="../system/app/pages/reportAbuse.html" target="_blank">Denunciar abuso</a><span aria-hidden="true">|</span><a class="sites-system-link" href="javascript:;" onclick="window.open(webspace.printUrl)">Imprimir página</a><span aria-hidden="true">|</span><span class="sites-system-link">Tecnologia</span> <b class="powered-by"><a href="http://sites.google.com/site">Google Sites</a></b></p></div>
+</div>
+</div> 
+</div> 
+<script xmlns="http://www.w3.org/1999/xhtml" type="text/javascript">
+    window.jstiming.load.tick('sjl');
+  </script>
+<script xmlns="http://www.w3.org/1999/xhtml" src="../../../../ssl.gstatic.com/sites/p/954e25/system/js/jot_min_view__en.js"></script>
+<script xmlns="http://www.w3.org/1999/xhtml" type="text/javascript">
+    window.jstiming.load.tick('jl');
+  </script>
+<script xmlns="http://www.w3.org/1999/xhtml" type="text/javascript">
+                    sites.Searchbox.initialize(
+                        'sites-searchbox-search-button',
+                        {"object":[]}['object'],
+                        'search-site',
+                        {"label":"Configure search options...","url":"/site/prologsite/system/app/pages/admin/settings"});
+                  </script>
+<script xmlns="http://www.w3.org/1999/xhtml" type="text/javascript">
+      gsites.HoverPopupMenu.createSiteDropdownMenus('sites-header-nav-dropdown', false);
+    </script>
+<script xmlns="http://www.w3.org/1999/xhtml" type="text/javascript" defer="true">
+            JOT_setupNav("2bd", "Navigation", true);
+            JOT_addListener('titleChange', 'JOT_NAVIGATION_titleChange', 'COMP_2bd');
+          </script>
+<script xmlns="http://www.w3.org/1999/xhtml" type="text/javascript">
+  setTimeout(function() {
+    var fingerprint = gsites.date.TimeZone.getFingerprint([1109635200000, 1128902400000, 1130657000000, 1143333000000, 1143806400000, 1145000000000, 1146380000000, 1152489600000, 1159800000000, 1159500000000, 1162095000000, 1162075000000, 1162105500000]);
+    gsites.Xhr.send('../_/tz.html', null, null, 'GET', null, null, { afjstz: fingerprint });
+  }, 500);
+</script>
+<script xmlns="http://www.w3.org/1999/xhtml">
+                    window.onload = function() {
+                      if (false) {
+                        JOT_setMobilePreview();
+                      }
+                      var loadTimer = window.jstiming.load;
+                      loadTimer.tick("ol");
+                      loadTimer["name"] = "load," + webspace.page.type + ",user_page";
+                      window.jstiming.report(loadTimer, {}, 'https://gg.google.com/csi');
+                    }
+                  </script>
+<script xmlns="http://www.w3.org/1999/xhtml" type="text/javascript">
+        JOT_insertAnalyticsCode(false,
+            false);
+      </script>
+<script xmlns="http://www.w3.org/1999/xhtml" type="text/javascript">
+    var maestroRunner = new gsites.pages.view.SitesMaestroRunner(
+        webspace, "en");
+    maestroRunner.initListeners();
+    maestroRunner.installEditRender();
+  </script>
+<script xmlns="http://www.w3.org/1999/xhtml">
+        JOT_insertTranslateCode('pt_BR', 'en');
+      </script>
+<script xmlns="http://www.w3.org/1999/xhtml" type="text/javascript" defer="true">
+  //<![CDATA[
+    // Decorate any fastUI buttons on the page with a class of 'goog-button'.
+    if (webspace.user.hasWriteAccess) {
+      JOT_decorateButtons();
+    }
+
+    // Fires delayed events.
+    (function() {
+      JOT_fullyLoaded = true;
+      var delayedEvents = JOT_delayedEvents;
+      for (var x = 0; x < delayedEvents.length; x++) {
+        var event = delayedEvents[x];
+        JOT_postEvent(event.eventName, event.eventSrc, event.payload);
+      }
+      JOT_delayedEvents = null;
+      JOT_postEvent('pageLoaded');
+    })();
+  //]]>
+</script>
+<script xmlns="http://www.w3.org/1999/xhtml" type="text/javascript">
+    JOT_postEvent('decorateGvizCharts');
+  </script>
+<script type="text/javascript">
+          JOT_setupPostRenderingManager();
+        </script>
+<script type="text/javascript">
+          JOT_postEvent('renderPlus', null, 'sites-chrome-main');
+        </script>
+<script type="text/javascript">
+          sites.codeembed.init();
+        </script>
+<div id="server-timer-div" style="display:none"> </div>
+<script type="text/javascript">
+          window.jstiming.load.tick('render');
+          JOT_postEvent('usercontentrendered', this);
+        </script>
+</body>
+
+<!-- Mirrored from sites.google.com/site/prologsite/prolog-problems/4 by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 12 Sep 2022 18:37:22 GMT -->
+</html>

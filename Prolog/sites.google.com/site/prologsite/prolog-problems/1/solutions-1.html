@@ -1,0 +1,618 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" itemscope="" itemtype="http://schema.org/WebPage">
+
+<!-- Mirrored from sites.google.com/site/prologsite/prolog-problems/1/solutions-1 by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 12 Sep 2022 18:37:48 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="chrome=1" />
+<script type="text/javascript">/* Copyright 2008 Google. */ (function() { /*
+
+Copyright The Closure Library Authors.
+SPDX-License-Identifier: Apache-2.0
+*/
+(function(){function e(g){this.t={};this.tick=function(h,k,f){this.t[h]=[void 0!=f?f:(new Date).getTime(),k];if(void 0==f)try{window.console.timeStamp("CSI/"+h)}catch(m){}};this.getStartTickTime=function(){return this.t.start[0]};this.tick("start",null,g)}var a;if(window.performance)var d=(a=window.performance.timing)&&a.responseStart;var l=0<d?new e(d):new e;window.jstiming={Timer:e,load:l};if(a){var b=a.navigationStart;0<b&&d>=b&&(window.jstiming.srt=d-b)}if(a){var c=window.jstiming.load;0<b&&d>=
+b&&(c.tick("_wtsrt",void 0,b),c.tick("wtsrt_","_wtsrt",d),c.tick("tbsd_","wtsrt_"))}try{a=null,window.chrome&&window.chrome.csi&&(a=Math.floor(window.chrome.csi().pageT),c&&0<b&&(c.tick("_tbnd",void 0,window.chrome.csi().startE),c.tick("tbnd_","_tbnd",b))),null==a&&window.gtbExternal&&(a=window.gtbExternal.pageT()),null==a&&window.external&&(a=window.external.pageT,c&&0<b&&(c.tick("_tbnd",void 0,window.external.startE),c.tick("tbnd_","_tbnd",b))),a&&(window.jstiming.pt=a)}catch(g){}})(); })()
+</script>
+<link rel="shortcut icon" href="https://f93da235-a-62cb3a1a-s-sites.googlegroups.com/site/prologsite/favicon.ico?attachauth=ANoY7cq2Qe7SC69SulHNyg_hGTdHvEsMqPylnfIrkl5lDg0IdA1zHWjP-1U_qIc2BdYL8Y967JCbOSzlirg8OKg9pg8LaWwIkNqp7MCysIRz4USB0GkJftURvxMzw0qflG2P2Tqn7l19x2jLm3bCOrHsTcdhMGBA7cHI1x4JgjHES2yYLzkuNlch5XwiqlJG4DjknH3bG_QU-Lftq5rBff4o9ZHzAxFqxA%3D%3D&amp;attredirects=0" type="image/x-icon" />
+<link rel="apple-touch-icon" href="../../../../../ssl.gstatic.com/sites/p/954e25/system/app/images/apple-touch-icon.png" type="image/png" />
+<script type="text/javascript">/* Copyright 2008 Google. */ (function() { function d(a){return document.getElementById(a)}window.byId=d;function g(a){return a.replace(/^\s+|\s+$/g,"")}window.trim=g;var h=[],k=0;window.JOT_addListener=function(a,b,c){var f=new String(k++);a={eventName:a,handler:b,compId:c,key:f};h.push(a);return f};window.JOT_removeListenerByKey=function(a){for(var b=0;b<h.length;b++)if(h[b].key==a){h.splice(b,1);break}};window.JOT_removeAllListenersForName=function(a){for(var b=0;b<h.length;b++)h[b].eventName==a&&h.splice(b,1)};
+window.JOT_postEvent=function(a,b,c){var f={eventName:a,eventSrc:b||{},payload:c||{}};if(window.JOT_fullyLoaded)for(b=h.length,c=0;c<b&&c<h.length;c++){var e=h[c];e&&e.eventName==a&&(f.listenerCompId=e.compId||"",(e="function"==typeof e.handler?e.handler:window[e.handler])&&e(f))}else window.JOT_delayedEvents.push({eventName:a,eventSrc:b,payload:c})};window.JOT_delayedEvents=[];window.JOT_fullyLoaded=!1;
+window.JOT_formatRelativeToNow=function(a,b){a=((new Date).getTime()-a)/6E4;if(1440<=a||0>a)return null;var c=0;60<=a&&(a/=60,c=2);2<=a&&c++;return b?window.JOT_siteRelTimeStrs[c].replace("__duration__",Math.floor(a)):window.JOT_userRelTimeStrs[c].replace("__duration__",Math.floor(a))}; })()
+</script>
+<link rel="stylesheet" type="text/css" href="../../../../../ssl.gstatic.com/sites/p/954e25/system/app/pagetypes/filecabinet/filecabinet.css" />
+<script>
+
+  
+
+  var breadcrumbs = [{"path":"/site/prologsite/prolog-problems","deleted":false,"title":"Prolog Problems","dir":"ltr"},{"path":"/site/prologsite/prolog-problems/1","deleted":false,"title":"1. Prolog Lists","dir":"ltr"},{"path":"/site/prologsite/prolog-problems/1/solutions-1","deleted":false,"title":"Solutions-1","dir":"ltr"}];
+  var JOT_clearDotPath = '../../../../../ssl.gstatic.com/sites/p/954e25/system/app/images/cleardot.gif';
+
+  
+  var JOT_userRelTimeStrs = ["um minuto atr\u00e1s","__duration__ minutos atr\u00e1s","uma hora atr\u00e1s","h\u00e1 __duration__ horas"];
+
+  
+  
+
+  
+
+  var webspace = {"gvizGstaticVersion":"current","enableAnalytics":false,"pageSharingId":"jotspot_page","codeembeds":{"outerIframeSrc":"https://www.gstatic.com/jotspot/embeds/code/0f08d42392f2000e7e3f3daf5b427a43/outer_iframe.html","innerIframeSrc":"https://1118444827-jotspot-embeds.googleusercontent.com/code/8d87fa64604b2a11fae2ed06104c58d3/inner_iframe.html"},"enableUniversalAnalytics":false,"sharingPolicy":"OPENED","siteTitle":"Prolog Site","experiments":{"enableSubpagesGadgetInTakeout":true,"overrideDisableDomainEditing":false,"DisableSiteEditingFeature__disable_site_editing":true,"disableDomainEditing":true},"jot2atari":{"eligibility":"INELIGIBLE"},"onepickUrl":"https://docs.google.com/picker","adsensePublisherId":null,"features":{"moreMobileStyleImprovements":null,"subscriptionDataMigrationInProgress":null,"plusBadge":false},"configProperties":{"disableSiteEditing":null},"isPublic":true,"newSitesBaseUrl":"https://sites.google.com","isConsumer":true,"serverFlags":{"jot2AtariLearnMoreUrl":"https://support.google.com/sites/answer/7035197"},"domainAnalyticsAccountId":"","plusPageId":"","signInUrl":"https://accounts.google.com/AccountChooser?continue=https://sites.google.com/site/prologsite/prolog-problems/1/solutions-1&service=jotspot","analyticsAccountId":"","scottyUrl":"/_/upload","homePath":"/","siteNoticeUrlEnabled":null,"plusPageUrl":"","adsensePromoClickedOrSiteIneligible":true,"csiReportUri":"https://gg.google.com/csi","sharingId":"jotspot","termsUrl":"//www.google.com/intl/pt/policies/terms/","gvizVersion":1,"editorResources":{"sitelayout":["https://ssl.gstatic.com/sites/p/954e25/system/app/css/sitelayouteditor.css"],"text":["https://ssl.gstatic.com/sites/p/954e25/system/js/codemirror.js","../../../../../ssl.gstatic.com/sites/p/954e25/system/app/css/codemirror_css.css","../../../../../ssl.gstatic.com/sites/p/954e25/system/js/trog_edit__pt_br.js","../../../../../ssl.gstatic.com/sites/p/954e25/system/app/css/trogedit.css","../../_/rsrc/1662018100000/system/app/css/editor.css","../../../../../ssl.gstatic.com/sites/p/954e25/system/app/css/codeeditor.css","/site/prologsite/_/rsrc/1662018100000/system/app/css/camelot/editor-jfk.css"]},"sharingUrlPrefix":"/_/sharing","isAdsenseEnabled":true,"domain":"defaultdomain","baseUri":"/site/prologsite","name":"prologsite","siteTemplateId":false,"siteNoticeRevision":null,"siteNoticeUrlAddress":null,"siteNoticeMessage":null,"page":{"isRtlLocale":false,"canDeleteWebspace":null,"isPageDraft":null,"parentPath":"/prolog-problems/1","parentWuid":"wuid:gx:6727b95992b8c5a3","siteLocale":"en","timeZone":"America/Los_Angeles","type":"filecabinet","title":"Solutions-1","locale":"pt_BR","wuid":"wuid:gx:76d40c855c82c833","revision":5,"path":"/prolog-problems/1/solutions-1","isSiteRtlLocale":false,"pageInheritsPermissions":null,"name":"solutions-1","canChangePath":true,"state":"","properties":{},"bidiEnabled":false,"currentTemplate":{"path":"/system/app/pagetemplates/filecabinet","title":"Arquivo"}},"canPublishScriptToAnyone":true,"user":{"keyboardShortcuts":true,"sessionIndex":"","guest_":true,"displayNameOrEmail":"guest","userName":"guest","uid":"","renderMobile":false,"domain":"","namespace":"","hasWriteAccess":false,"namespaceUser":false,"primaryEmail":"guest","hasAdminAccess":false,"isGoogleAdmin":false},"gadgets":{"baseUri":"/site/prologsite/system/app/pages/gadgets"}};
+  webspace.page.breadcrumbs = breadcrumbs;
+
+  
+  var JOT_siteRelTimeStrs = ["a minute ago","__duration__ minutes ago","an hour ago","__duration__ hours ago"];
+
+</script>
+<script type="text/javascript">
+                window.jstiming.load.tick('scl');
+              </script>
+<meta name="title" content="Solutions-1 - Prolog Site" />
+<meta itemprop="name" content="Solutions-1 - Prolog Site" />
+<meta property="og:title" content="Solutions-1 - Prolog Site" />
+<meta name="description" content="This site hosts a Prolog course and a collection of Prolog problems" />
+<meta itemprop="description" content="This site hosts a Prolog course and a collection of Prolog problems" />
+<meta id="meta-tag-description" property="og:description" content="This site hosts a Prolog course and a collection of Prolog problems" />
+<style type="text/css">
+</style>
+<link rel="stylesheet" type="text/css" href="../../../../../ssl.gstatic.com/sites/p/954e25/system/app/themes/microsport/standard-css-microsport-ltr-ltr.css" />
+<link rel="stylesheet" type="text/css" href="../../_/rsrc/1662018100000/system/app/css/overlay6fb2.css?cb=microsport160goog-ws-left" />
+<link rel="stylesheet" type="text/css" href="../../_/rsrc/1662018100000/system/app/css/camelot/allthemes-view.css" />
+<!--[if IE]>
+          <link rel="stylesheet" type="text/css" href="/site/prologsite/system/app/css/camelot/allthemes%2die.css" />
+        <![endif]-->
+<title>Solutions-1 - Prolog Site</title>
+<script type="text/javascript">
+                window.jstiming.load.tick('cl');
+              </script>
+</head>
+<body xmlns="http://www.google.com/ns/jotspot" id="body" class=" en            ">
+<div id="sites-page-toolbar" class="sites-header-divider">
+<div xmlns="http://www.w3.org/1999/xhtml" id="sites-status" class="sites-status" style="display:none;"><div id="sites-notice" class="sites-notice" role="status" aria-live="assertive"> </div></div>
+</div>
+<div id="sites-chrome-everything-scrollbar">
+<div id="sites-chrome-everything" class="">
+<div id="sites-chrome-page-wrapper" style="direction: ltr">
+<div id="sites-chrome-page-wrapper-inside">
+<div xmlns="http://www.w3.org/1999/xhtml" id="sites-chrome-header-wrapper" style="">
+<table id="sites-chrome-header" class="sites-layout-hbox" cellspacing="0" style="">
+<tr class="sites-header-primary-row" id="sites-chrome-userheader">
+<td id="sites-header-title" class="" role="banner"><div class="sites-header-cell-buffer-wrapper"><h2><a href="../../index.html" dir="ltr" id="sites-chrome-userheader-title">Prolog Site</a></h2></div></td><td class="sites-layout-searchbox  "><div class="sites-header-cell-buffer-wrapper"><form id="sites-searchbox-form" action="https://sites.google.com/site/prologsite/system/app/pages/search" role="search"><input type="hidden" id="sites-searchbox-scope" name="scope" value="search-site" /><input type="text" id="jot-ui-searchInput" name="q" size="20" value="" aria-label="Search this site" /><div id="sites-searchbox-button-set" class="goog-inline-block"><div role="button" id="sites-searchbox-search-button" class="goog-inline-block jfk-button jfk-button-standard" tabindex="0">Search this site</div></div></form></div></td>
+</tr>
+<tr class="sites-header-secondary-row" id="sites-chrome-horizontal-nav">
+<td colspan="2" id="sites-chrome-header-horizontal-nav-container" role="navigation">
+</td>
+</tr>
+</table>
+</div>
+<div id="sites-chrome-main-wrapper">
+<div id="sites-chrome-main-wrapper-inside">
+<table id="sites-chrome-main" class="sites-layout-hbox" cellspacing="0" cellpadding="{scmCellpadding}" border="0">
+<tr>
+<td id="sites-chrome-sidebar-left" class="sites-layout-sidebar-left initial" style="width:160px">
+<div xmlns="http://www.w3.org/1999/xhtml" id="COMP_2bd" class="sites-embed" role="navigation"><div class="sites-embed-content sites-sidebar-nav"><ul role="navigation" jotId="navList" class="has-expander"><li class="topLevel nav-first "><div dir="ltr" style="padding-left: 19px;"><a href="../../home.html" jotId="wuid:gx:341db5a4ed00d1a" class="sites-navigation-link topLevel">Home</a></div></li><li class="topLevel "><div dir="ltr" style="padding-left: 19px;"><a href="../../author.html" jotId="wuid:gx:3c9b6b2f3738ce0f" class="sites-navigation-link topLevel">Author</a></div></li><li class="topLevel parent " wuid="gx:62780df045cbf614"><div dir="ltr" style="padding-left: 0px;"><div class="expander"></div><a href="../../prolog-course.html" jotId="wuid:gx:62780df045cbf614" class="sites-navigation-link topLevel">Prolog Course</a></div><ul role="navigation" class="has-expander"><li class=""><div dir="ltr" style="padding-left: 38px;"><a href="../../prolog-course/a-first-glimpse.html" jotId="wuid:gx:4ff2cf368f81ba6" class="sites-navigation-link">1. A First Glimpse</a></div></li><li class=""><div dir="ltr" style="padding-left: 38px;"><a href="../../prolog-course/2-synrtax-and-meaning.html" jotId="wuid:gx:5e15c00eb05443c6" class="sites-navigation-link">2. Syntax and Meaning</a></div></li></ul></li><li class="topLevel parent " wuid="gx:759ecda8d60e3a1c"><div dir="ltr" style="padding-left: 0px;"><div class="expander"></div><a href="../../prolog-problems.html" jotId="wuid:gx:759ecda8d60e3a1c" class="sites-navigation-link topLevel">Prolog Problems</a></div><ul role="navigation" class="has-expander"><li class=""><div dir="ltr" style="padding-left: 38px;"><a href="../1.html" jotId="wuid:gx:6727b95992b8c5a3" class="sites-navigation-link">1. Prolog Lists</a></div></li><li class=""><div dir="ltr" style="padding-left: 38px;"><a href="../2.html" jotId="wuid:gx:104b11b6fc852518" class="sites-navigation-link">2. Arithmetic</a></div></li><li class=""><div dir="ltr" style="padding-left: 38px;"><a href="../3.html" jotId="wuid:gx:533d8f77d8d861bd" class="sites-navigation-link">3. Logic and Codes</a></div></li><li class=""><div dir="ltr" style="padding-left: 38px;"><a href="../4.html" jotId="wuid:gx:ea7f9e6f5084d18" class="sites-navigation-link">4. Binary Trees</a></div></li><li class=""><div dir="ltr" style="padding-left: 38px;"><a href="../5.html" jotId="wuid:gx:16e5055a13f4667a" class="sites-navigation-link">5. Multiway Trees</a></div></li><li class=""><div dir="ltr" style="padding-left: 38px;"><a href="../6.html" jotId="wuid:gx:145fd6273058e53b" class="sites-navigation-link">6. Graphs</a></div></li><li class=""><div dir="ltr" style="padding-left: 38px;"><a href="../7.html" jotId="wuid:gx:362ab8a32fd7639a" class="sites-navigation-link">7. Miscellaneous</a></div></li></ul></li><li class="topLevel "><div dir="ltr" style="padding-left: 19px;"><a href="../../system/app/pages/sitemap/hierarchy.html" jotId="wuid:gx:79311e19ba5ac357" class="sites-navigation-link topLevel">Sitemap</a></div></li></ul></div></div>
+</td>
+<td id="sites-canvas-wrapper">
+<div id="sites-canvas" role="main">
+<div id="goog-ws-editor-toolbar-container"> </div>
+<div xmlns="http://www.w3.org/1999/xhtml" id="title-crumbs" style="">
+<A href="../../prolog-problems.html" dir="ltr">Prolog Problems</A>‎ &gt; ‎<A href="../1.html" dir="ltr">1. Prolog Lists</A>‎ &gt; ‎
+  </div>
+<h3 xmlns="http://www.w3.org/1999/xhtml" id="sites-page-title-header" style="" align="left">
+<span id="sites-page-title" dir="ltr" tabindex="-1" style="outline: none">Solutions-1</span>
+</h3>
+<div id="sites-canvas-main" class="sites-canvas-main">
+<div id="sites-canvas-main-content">
+<table xmlns="http://www.w3.org/1999/xhtml" cellspacing="0" class="sites-layout-name-one-column sites-layout-hbox"><tbody><tr><td class="sites-layout-tile sites-tile-name-content-1 sites-layout-empty-tile"><div dir="ltr"><br /></div></td></tr></tbody></table>
+</div> 
+<div id="filecabinet-body" class="filecabinet">
+<div xmlns="http://www.w3.org/1999/xhtml" id="JOT_FILECAB_wrapper__unfiled" class="collapsible"><table id="JOT_FILECAB_folder__unfiled" class="filecabinet-table"><thead style="display: none"><tr><th class="td-select">Seleção</th><th class="td-icon">Ícone "Tipo de arquivo"</th><th class="td-file">Nome do arquivo</th><th class="td-desc filecabinet-desc">Descrição</th><th class="td-size">Tamanho</th><th class="td-rev">Revisão</th><th class="td-time">Hora</th><th class="td-user">Usuário</th></tr></thead><tbody><tr id="JOT_FILECAB_container_wuid:gx:563b400fea7694b9">
+<td class="td-select"><input class="filecabinet-checkbox" type="checkbox" aria-labelledby="JOT_FILECAB_label_wuid:gx:563b400fea7694b9" /></td>
+<td class="td-icon" style="line-height:20px">
+<div class="sites-translucent sites-symbol" aria-label="Arquivo" title="Arquivo">ċ</div>
+</td>
+<td class="td-file"><span class="td-value" id="JOT_FILECAB_label_wuid:gx:563b400fea7694b9" aria-hidden="true">p1_01.pl</span><br /><SPAN style="word-spacing: 3px;"><a href="https://f93da235-a-62cb3a1a-s-sites.googlegroups.com/site/prologsite/prolog-problems/1/solutions-1/p1_01.pl?attachauth=ANoY7cqS67msSHscodJv2ruok6fUcla9Coqer9DMa0ZVFrk7Fxv_FtLXX2cU7QR6cwOEPkmKYQ_9ZVg6eFpYzN-0iynVSjyUJ7bOPRXv70y1cHbicNJa9UhCrDznoii-tHbAlQWP6IEx_bh4KViApXCuPM4hMTvtHb3HUn_Xpogep3TiLvC7NE3-tTyETuLvMJKxK5DVtgXZQu-Tqqj6XVsZyO9SfEXmh6tVEPtA27zuaCwZ9hqEIc9Jx-NBngxrj1bipga4MXnj&amp;attredirects=0&amp;d=1" rel="nofollow" dir="ltr" target="_blank">Download</a></SPAN></td>
+<td class="td-desc filecabinet-desc" tabindex="0" dir=""> </td>
+<td class="td-size" data-val="218">1k</td>
+<td class="td-rev" data-val="1">v. 1  </td>
+<td class="td-time" data-val="1264876828891">
+<script type="text/javascript">
+      //<![CDATA[
+        function JOT_insertRelDate(timestamp, absTimeStr, isSiteLocale, dir) {
+          var relTimeStr = JOT_formatRelativeToNow(timestamp, isSiteLocale);
+          if (relTimeStr) {
+            if (isSiteLocale) {
+              document.write('<span timestamp="' + timestamp + '" issitelocale="' + isSiteLocale +
+                '" title="' + absTimeStr + '" dir="' + dir + '">' + relTimeStr + '<' + '/span>');
+            } else {
+              document.write('<span timestamp="' + timestamp + '" title="' + absTimeStr +
+              '" dir="' + dir + '">' + relTimeStr + '<' + '/span>');
+            }
+          } else {
+            document.write(absTimeStr);
+          }
+        }
+      //]]>
+</script>
+<span dir="ltr">Jan 30, 2010, 10:40 AM</span>
+</td>
+<td class="td-user">Werner Hett</td>
+</tr><tr id="JOT_FILECAB_container_wuid:gx:3f7a37cd1c18a385">
+<td class="td-select"><input class="filecabinet-checkbox" type="checkbox" aria-labelledby="JOT_FILECAB_label_wuid:gx:3f7a37cd1c18a385" /></td>
+<td class="td-icon" style="line-height:20px">
+<div class="sites-translucent sites-symbol" aria-label="Arquivo" title="Arquivo">ċ</div>
+</td>
+<td class="td-file"><span class="td-value" id="JOT_FILECAB_label_wuid:gx:3f7a37cd1c18a385" aria-hidden="true">p1_02.pl</span><br /><SPAN style="word-spacing: 3px;"><a href="https://f93da235-a-62cb3a1a-s-sites.googlegroups.com/site/prologsite/prolog-problems/1/solutions-1/p1_02.pl?attachauth=ANoY7cqm0tCT1Hkpj5L6-3nXX2-Tn8pmgBwffnPLCmBQw3D6BItceNbnkEmrm7yY6to5ITMKfh-L7aR8UsaW1KjoeolLxU3AzruCj5xDmrodajwJqIyjMcpAuVCR8hBHh3DyjAips7G3u5ADVfYjI2Doo-C-4UdR6ipBKlM3-qtG90XH9ltW4TGg85vLlbhcIxIbZgTk-fi1PvKI_ix-SzqnreQbI3W7-_UOVsqouyzhkGkFel4gZgbF9cHSDSo4MPvY4Zk6f-e_&amp;attredirects=0&amp;d=1" rel="nofollow" dir="ltr" target="_blank">Download</a></SPAN></td>
+<td class="td-desc filecabinet-desc" tabindex="0" dir=""> </td>
+<td class="td-size" data-val="229">1k</td>
+<td class="td-rev" data-val="1">v. 1  </td>
+<td class="td-time" data-val="1264876850216">
+<span dir="ltr">Jan 30, 2010, 10:40 AM</span>
+</td>
+<td class="td-user">Werner Hett</td>
+</tr><tr id="JOT_FILECAB_container_wuid:gx:5217ca56823d499f">
+<td class="td-select"><input class="filecabinet-checkbox" type="checkbox" aria-labelledby="JOT_FILECAB_label_wuid:gx:5217ca56823d499f" /></td>
+<td class="td-icon" style="line-height:20px">
+<div class="sites-translucent sites-symbol" aria-label="Arquivo" title="Arquivo">ċ</div>
+</td>
+<td class="td-file"><span class="td-value" id="JOT_FILECAB_label_wuid:gx:5217ca56823d499f" aria-hidden="true">p1_03.pl</span><br /><SPAN style="word-spacing: 3px;"><a href="https://f93da235-a-62cb3a1a-s-sites.googlegroups.com/site/prologsite/prolog-problems/1/solutions-1/p1_03.pl?attachauth=ANoY7crTWaRdXL-pAVCzRyuXHxXIG14KqwCI36pB-KYLR31y7rmk7t51ndIV0L-Xr30Z7MNR3wGwNwEriIzPPbNWsfp0RdTgx7CbPPhz__jQkHpeOkV9Cbo87D3qZ8QcoKv6o_fMPr2VlwEm3XvvDwl_7A4NIwg5nIWvlXBBYiqA5RCKPS8ZAPM5kUT-BJ5zDBIBwWr7xyZupaYaoTLts9g2wnCXrEArPJ8C_O9eSdD9u9rz1CPMvmSNuXY2UA5AIxBC8I-92YR9&amp;attredirects=0&amp;d=1" rel="nofollow" dir="ltr" target="_blank">Download</a></SPAN></td>
+<td class="td-desc filecabinet-desc" tabindex="0" dir=""> </td>
+<td class="td-size" data-val="335">1k</td>
+<td class="td-rev" data-val="1">v. 1  </td>
+<td class="td-time" data-val="1264876867570">
+<span dir="ltr">Jan 30, 2010, 10:41 AM</span>
+</td>
+<td class="td-user">Werner Hett</td>
+</tr><tr id="JOT_FILECAB_container_wuid:gx:5e35266e3714274d">
+<td class="td-select"><input class="filecabinet-checkbox" type="checkbox" aria-labelledby="JOT_FILECAB_label_wuid:gx:5e35266e3714274d" /></td>
+<td class="td-icon" style="line-height:20px">
+<div class="sites-translucent sites-symbol" aria-label="Arquivo" title="Arquivo">ċ</div>
+</td>
+<td class="td-file"><span class="td-value" id="JOT_FILECAB_label_wuid:gx:5e35266e3714274d" aria-hidden="true">p1_04.pl</span><br /><SPAN style="word-spacing: 3px;"><a href="https://f93da235-a-62cb3a1a-s-sites.googlegroups.com/site/prologsite/prolog-problems/1/solutions-1/p1_04.pl?attachauth=ANoY7crfqKQdIwU3dnpCGmS0V2UQ3ElcxS_Pjb2cZTbjOB_q6cVvoiAMkyZrInk71ti9WVt3r9EPlPvpbORmqAhuPictoStjMIJA6zSAPHhEfgu6Agjz-Emp3TIXM5EZeCyM2srfXUoEJVzIz7lJ7STxwrju6fYbyTAk5p1BdcpJHiwcSqTIiipak1m5rS87SmaDN3mZXnsFCKPayUZllG_xXrEvj9Siu9jDyRyTRy4T9JjLgq6wRBhJOkf9eNRKBYB50agbzRau&amp;attredirects=0&amp;d=1" rel="nofollow" dir="ltr" target="_blank">Download</a></SPAN></td>
+<td class="td-desc filecabinet-desc" tabindex="0" dir=""> </td>
+<td class="td-size" data-val="252">1k</td>
+<td class="td-rev" data-val="1">v. 1  </td>
+<td class="td-time" data-val="1264876883535">
+<span dir="ltr">Jan 30, 2010, 10:41 AM</span>
+</td>
+<td class="td-user">Werner Hett</td>
+</tr><tr id="JOT_FILECAB_container_wuid:gx:ba399eaddf2f74">
+<td class="td-select"><input class="filecabinet-checkbox" type="checkbox" aria-labelledby="JOT_FILECAB_label_wuid:gx:ba399eaddf2f74" /></td>
+<td class="td-icon" style="line-height:20px">
+<div class="sites-translucent sites-symbol" aria-label="Arquivo" title="Arquivo">ċ</div>
+</td>
+<td class="td-file"><span class="td-value" id="JOT_FILECAB_label_wuid:gx:ba399eaddf2f74" aria-hidden="true">p1_05.pl</span><br /><SPAN style="word-spacing: 3px;"><a href="https://f93da235-a-62cb3a1a-s-sites.googlegroups.com/site/prologsite/prolog-problems/1/solutions-1/p1_05.pl?attachauth=ANoY7coHiKFIVK5D6P7dB_tic3Sr-1iw0GCMwqYyNHX7nsnQAmFsWJnCbudQQHRZC6r8n3iQWhBfaa2_1djy1mB0twI9VPPUEAY4iZvjePLBIGtzNlYFs6QVxNussdat4e6je2CiuMGpBuG4WaYKgHILjXo2W6DlYthADZx_6nwxmc37E8h4h1wbF_FSOEPZIA2pe3Jx7DO4s_pkmUQRtqPkgbkxu3g6W_RGsnlQ-M-JCXe5nvwHa-7sMqc4MWJzxewVvItvyEI9&amp;attredirects=0&amp;d=1" rel="nofollow" dir="ltr" target="_blank">Download</a></SPAN></td>
+<td class="td-desc filecabinet-desc" tabindex="0" dir=""> </td>
+<td class="td-size" data-val="326">1k</td>
+<td class="td-rev" data-val="1">v. 1  </td>
+<td class="td-time" data-val="1264876898176">
+<span dir="ltr">Jan 30, 2010, 10:41 AM</span>
+</td>
+<td class="td-user">Werner Hett</td>
+</tr><tr id="JOT_FILECAB_container_wuid:gx:4c77bbb1daccad24">
+<td class="td-select"><input class="filecabinet-checkbox" type="checkbox" aria-labelledby="JOT_FILECAB_label_wuid:gx:4c77bbb1daccad24" /></td>
+<td class="td-icon" style="line-height:20px">
+<div class="sites-translucent sites-symbol" aria-label="Arquivo" title="Arquivo">ċ</div>
+</td>
+<td class="td-file"><span class="td-value" id="JOT_FILECAB_label_wuid:gx:4c77bbb1daccad24" aria-hidden="true">p1_06.pl</span><br /><SPAN style="word-spacing: 3px;"><a href="https://f93da235-a-62cb3a1a-s-sites.googlegroups.com/site/prologsite/prolog-problems/1/solutions-1/p1_06.pl?attachauth=ANoY7cpoOanzYJkR64tPXxd4_jzztk2Py3_6gHAB5loP20nfpzFPDJjSg-CYEYdUXo9Um-AscKYUUV5znDvCnEo9wL5P9sSSUOVYQvvO3NuVUhzJXB1qtP7MCitiOjHvwCS1BmX7joYLrro5YBAG8X1Qc-9ZopTAgt_w3qLYFVK-Vov7-pcPI2H-MGcQyy-xMxVz8Y20DW-sB9NZXqVQIq-nxEaPTAb3fU_iDsBd_DDhs8j8J0drglyVTz-aYic5x543MvXlrC0_&amp;attredirects=0&amp;d=1" rel="nofollow" dir="ltr" target="_blank">Download</a></SPAN></td>
+<td class="td-desc filecabinet-desc" tabindex="0" dir=""> </td>
+<td class="td-size" data-val="223">1k</td>
+<td class="td-rev" data-val="1">v. 1  </td>
+<td class="td-time" data-val="1264876914289">
+<span dir="ltr">Jan 30, 2010, 10:41 AM</span>
+</td>
+<td class="td-user">Werner Hett</td>
+</tr><tr id="JOT_FILECAB_container_wuid:gx:4d7789cc17d97d">
+<td class="td-select"><input class="filecabinet-checkbox" type="checkbox" aria-labelledby="JOT_FILECAB_label_wuid:gx:4d7789cc17d97d" /></td>
+<td class="td-icon" style="line-height:20px">
+<div class="sites-translucent sites-symbol" aria-label="Arquivo" title="Arquivo">ċ</div>
+</td>
+<td class="td-file"><span class="td-value" id="JOT_FILECAB_label_wuid:gx:4d7789cc17d97d" aria-hidden="true">p1_07.pl</span><br /><SPAN style="word-spacing: 3px;"><a href="https://f93da235-a-62cb3a1a-s-sites.googlegroups.com/site/prologsite/prolog-problems/1/solutions-1/p1_07.pl?attachauth=ANoY7cro90OgYfZwdCDzXNws62G4kdy2HQBuK8AKDSwaOfhMZ8-VoDWyy24JdgmHDEOajKxJNH27G2pl6HlerRFvFTGLjFo6KzS4-2VSZBeWNdrj0GD6j5JMIQfvVM0mLfx279ba4VX6Iraj-uMxlX6VAFdS2y9XDGlLupiRyFwVIs8MCtrQ_ptx_hDAsn17NuT5Uwk1--qRbAWgLVrJBNV4brOpFdySPV5AQKqORYrt_1i8hWiuX-X0i49zF8fmRrTbXh_f1a2J&amp;attredirects=0&amp;d=1" rel="nofollow" dir="ltr" target="_blank">Download</a></SPAN></td>
+<td class="td-desc filecabinet-desc" tabindex="0" dir=""> </td>
+<td class="td-size" data-val="452">1k</td>
+<td class="td-rev" data-val="1">v. 1  </td>
+<td class="td-time" data-val="1264876929020">
+<span dir="ltr">Jan 30, 2010, 10:42 AM</span>
+</td>
+<td class="td-user">Werner Hett</td>
+</tr><tr id="JOT_FILECAB_container_wuid:gx:7aced01d41403397">
+<td class="td-select"><input class="filecabinet-checkbox" type="checkbox" aria-labelledby="JOT_FILECAB_label_wuid:gx:7aced01d41403397" /></td>
+<td class="td-icon" style="line-height:20px">
+<div class="sites-translucent sites-symbol" aria-label="Arquivo" title="Arquivo">ċ</div>
+</td>
+<td class="td-file"><span class="td-value" id="JOT_FILECAB_label_wuid:gx:7aced01d41403397" aria-hidden="true">p1_08.pl</span><br /><SPAN style="word-spacing: 3px;"><a href="https://f93da235-a-62cb3a1a-s-sites.googlegroups.com/site/prologsite/prolog-problems/1/solutions-1/p1_08.pl?attachauth=ANoY7cqZwyWZiIT_8BTq2btMW_cbfaQj-ZBPCMDQ472CxsOlisM60c1D3cN4N9wSL7x5bfrQp1yFlIH2cnOVOCvEeyN-hK9u7fSt6iBLEC-Lo0qpAQNFpWRHUs9PdeOOKRPQygw0XT0SbjtAQtZTbsH7Vk0N5trqJ1SbiZMaQNeohjZT84H_z7AGBI2s9dTe5BqD0mxDrE2OAFDU46d3VkJz8oEurDXtxwAIUHxYhvn3HdrsF2YuqJgQi8kXGka-P-WM2UxEOaVW&amp;attredirects=0&amp;d=1" rel="nofollow" dir="ltr" target="_blank">Download</a></SPAN></td>
+<td class="td-desc filecabinet-desc" tabindex="0" dir=""> </td>
+<td class="td-size" data-val="395">1k</td>
+<td class="td-rev" data-val="1">v. 1  </td>
+<td class="td-time" data-val="1264876943448">
+<span dir="ltr">Jan 30, 2010, 10:42 AM</span>
+</td>
+<td class="td-user">Werner Hett</td>
+</tr><tr id="JOT_FILECAB_container_wuid:gx:1d5a881401c1062f">
+<td class="td-select"><input class="filecabinet-checkbox" type="checkbox" aria-labelledby="JOT_FILECAB_label_wuid:gx:1d5a881401c1062f" /></td>
+<td class="td-icon" style="line-height:20px">
+<div class="sites-translucent sites-symbol" aria-label="Arquivo" title="Arquivo">ċ</div>
+</td>
+<td class="td-file"><span class="td-value" id="JOT_FILECAB_label_wuid:gx:1d5a881401c1062f" aria-hidden="true">p1_09.pl</span><br /><SPAN style="word-spacing: 3px;"><a href="https://f93da235-a-62cb3a1a-s-sites.googlegroups.com/site/prologsite/prolog-problems/1/solutions-1/p1_09.pl?attachauth=ANoY7crE-bIKFpQPAlPopLs1ryj7qg1g48KZcEw2vs3fNA87UGSz9pvwwJ7lxoMvNcLIe5xNR1ghJOJ2B26jiFgVSIGvgksqDUbhl9LXHmLep_7MbUUGV2YcXAA1jkK8Ncb2CvxS2WcSlRPD0LqOj_DGa9tim4wcOIzjt7pxV9DiIFusDadUk9M7Xd6JTKI-BMFJ6msk1NFwsodti7yN-eX4i8C40nzmMIuvhahksrZTktR9SKxXj3R5U6vbgruOgNPekxn6R3IV&amp;attredirects=0&amp;d=1" rel="nofollow" dir="ltr" target="_blank">Download</a></SPAN></td>
+<td class="td-desc filecabinet-desc" tabindex="0" dir=""> </td>
+<td class="td-size" data-val="570">1k</td>
+<td class="td-rev" data-val="1">v. 1  </td>
+<td class="td-time" data-val="1264876963592">
+<span dir="ltr">Jan 30, 2010, 10:42 AM</span>
+</td>
+<td class="td-user">Werner Hett</td>
+</tr><tr id="JOT_FILECAB_container_wuid:gx:2c4df3feac3a5daf">
+<td class="td-select"><input class="filecabinet-checkbox" type="checkbox" aria-labelledby="JOT_FILECAB_label_wuid:gx:2c4df3feac3a5daf" /></td>
+<td class="td-icon" style="line-height:20px">
+<div class="sites-translucent sites-symbol" aria-label="Arquivo" title="Arquivo">ċ</div>
+</td>
+<td class="td-file"><span class="td-value" id="JOT_FILECAB_label_wuid:gx:2c4df3feac3a5daf" aria-hidden="true">p1_10.pl</span><br /><SPAN style="word-spacing: 3px;"><a href="https://f93da235-a-62cb3a1a-s-sites.googlegroups.com/site/prologsite/prolog-problems/1/solutions-1/p1_10.pl?attachauth=ANoY7cqY-GMOeNkOuktE_2-neyios1AvjV5YVosNLZL5t6rH72xI1hzYKwqMqUEUX74P5CyjJou_Qgm55xDxb6q8LanzASs3pJHYukr267I4h2t-Nvxp3MvmV5J_pp0Fc8SgQ3vup-96YGdqPLW01xbl4Rc0Ost9IufQJVqWV4UNgs_T7JrgcIIFbYSxSnOSlWepTcLDJXsD_7WJyri5JRym6wnTt8Qfmf6A_ChFphs_nrJ0pvbmw-9CSYCY1yNHa6LWYe1asCbu&amp;attredirects=0&amp;d=1" rel="nofollow" dir="ltr" target="_blank">Download</a></SPAN></td>
+<td class="td-desc filecabinet-desc" tabindex="0" dir=""> </td>
+<td class="td-size" data-val="456">1k</td>
+<td class="td-rev" data-val="1">v. 1  </td>
+<td class="td-time" data-val="1264876979452">
+<span dir="ltr">Jan 30, 2010, 10:42 AM</span>
+</td>
+<td class="td-user">Werner Hett</td>
+</tr><tr id="JOT_FILECAB_container_wuid:gx:5d4d37154bedab8e">
+<td class="td-select"><input class="filecabinet-checkbox" type="checkbox" aria-labelledby="JOT_FILECAB_label_wuid:gx:5d4d37154bedab8e" /></td>
+<td class="td-icon" style="line-height:20px">
+<div class="sites-translucent sites-symbol" aria-label="Arquivo" title="Arquivo">ċ</div>
+</td>
+<td class="td-file"><span class="td-value" id="JOT_FILECAB_label_wuid:gx:5d4d37154bedab8e" aria-hidden="true">p1_11.pl</span><br /><SPAN style="word-spacing: 3px;"><a href="https://f93da235-a-62cb3a1a-s-sites.googlegroups.com/site/prologsite/prolog-problems/1/solutions-1/p1_11.pl?attachauth=ANoY7crjf0vLTNocUNCOSelV_zKaJaz1fFkmbgX98__T97eT6XVAQrU0wPNoX8bnw5e-JImM4aa8tGDaISlogqn_YAzpl9PXLH536WM7gEpfzcx2SB5HCOFFJG7mpXyQGo2TBTfWOzWC_YcA6uJGPg5DP6L3TDZgkOhAoMy_wlJdJJx61tSuNWtpaEniMumGrkl5t-TRWddRGE7kYoDk6gVuwXPnLNzUMXLhRiOw5-ZTo6CIj4wcpbyvX4p94sn02SwjX6EfexdV&amp;attredirects=0&amp;d=1" rel="nofollow" dir="ltr" target="_blank">Download</a></SPAN></td>
+<td class="td-desc filecabinet-desc" tabindex="0" dir=""> </td>
+<td class="td-size" data-val="584">1k</td>
+<td class="td-rev" data-val="1">v. 1  </td>
+<td class="td-time" data-val="1264876999119">
+<span dir="ltr">Jan 30, 2010, 10:43 AM</span>
+</td>
+<td class="td-user">Werner Hett</td>
+</tr><tr id="JOT_FILECAB_container_wuid:gx:4816a621b3c7a38f">
+<td class="td-select"><input class="filecabinet-checkbox" type="checkbox" aria-labelledby="JOT_FILECAB_label_wuid:gx:4816a621b3c7a38f" /></td>
+<td class="td-icon" style="line-height:20px">
+<div class="sites-translucent sites-symbol" aria-label="Arquivo" title="Arquivo">ċ</div>
+</td>
+<td class="td-file"><span class="td-value" id="JOT_FILECAB_label_wuid:gx:4816a621b3c7a38f" aria-hidden="true">p1_12.pl</span><br /><SPAN style="word-spacing: 3px;"><a href="https://f93da235-a-62cb3a1a-s-sites.googlegroups.com/site/prologsite/prolog-problems/1/solutions-1/p1_12.pl?attachauth=ANoY7cq6TrktMWN61O2pCu_3eEA8MbogQfm3EMsRW5s9bSQQNrtkDvDYMTjwGUu7tGULLvhRT5LnwAa0rKKDqDM9nQ5MEjhQcwp8aIizop3lIGRCLJ_lRxY9jp1UkCNI26IOHyOiEddybbXEViK3YMsO4IPo9VCp5mnXF5T0_IHcQgylEXY_bKFA1fxhcYz-gGocPGx-HUZoDuGpLab0g_fiJgEfZuSWzQho7Cbi5GwB1bipkj3SB4ZestznmkxUrNmXhnyFyZMw&amp;attredirects=0&amp;d=1" rel="nofollow" dir="ltr" target="_blank">Download</a></SPAN></td>
+<td class="td-desc filecabinet-desc" tabindex="0" dir=""> </td>
+<td class="td-size" data-val="362">1k</td>
+<td class="td-rev" data-val="1">v. 1  </td>
+<td class="td-time" data-val="1264877013738">
+<span dir="ltr">Jan 30, 2010, 10:43 AM</span>
+</td>
+<td class="td-user">Werner Hett</td>
+</tr><tr id="JOT_FILECAB_container_wuid:gx:2add24235bafbf35">
+<td class="td-select"><input class="filecabinet-checkbox" type="checkbox" aria-labelledby="JOT_FILECAB_label_wuid:gx:2add24235bafbf35" /></td>
+<td class="td-icon" style="line-height:20px">
+<div class="sites-translucent sites-symbol" aria-label="Arquivo" title="Arquivo">ċ</div>
+</td>
+<td class="td-file"><span class="td-value" id="JOT_FILECAB_label_wuid:gx:2add24235bafbf35" aria-hidden="true">p1_13.pl</span><br /><SPAN style="word-spacing: 3px;"><a href="https://f93da235-a-62cb3a1a-s-sites.googlegroups.com/site/prologsite/prolog-problems/1/solutions-1/p1_13.pl?attachauth=ANoY7cpx5wpsnWSCrLoc2IVYk4uexsX3_CnridFRlT9E6CwzGlSCoWGnpu6CFIMbg6l7lN0Pbzfu5XT2oxuI8dxuNB0Su79gNCoJlmtHXA4lGpvQFw-A4SV2dlDnZz3-nj0pryQtkexYpv7bSjEvL_gBV9uykW3e-Gm6ckC2of-SWnOHQm0oYIdl-VqyFTPTcGEJLmAAlQkRTTBY8HJ_qMxaYLMuKQlKxAzT7jw1TL7Nq8jX-kXNItJdWuyENIk4rede9Ml4RwGz&amp;attredirects=0&amp;d=1" rel="nofollow" dir="ltr" target="_blank">Download</a></SPAN></td>
+<td class="td-desc filecabinet-desc" tabindex="0" dir=""> </td>
+<td class="td-size" data-val="983">1k</td>
+<td class="td-rev" data-val="1">v. 1  </td>
+<td class="td-time" data-val="1264877024702">
+<span dir="ltr">Jan 30, 2010, 10:43 AM</span>
+</td>
+<td class="td-user">Werner Hett</td>
+</tr><tr id="JOT_FILECAB_container_wuid:gx:67323e4f7e927e73">
+<td class="td-select"><input class="filecabinet-checkbox" type="checkbox" aria-labelledby="JOT_FILECAB_label_wuid:gx:67323e4f7e927e73" /></td>
+<td class="td-icon" style="line-height:20px">
+<div class="sites-translucent sites-symbol" aria-label="Arquivo" title="Arquivo">ċ</div>
+</td>
+<td class="td-file"><span class="td-value" id="JOT_FILECAB_label_wuid:gx:67323e4f7e927e73" aria-hidden="true">p1_14.pl</span><br /><SPAN style="word-spacing: 3px;"><a href="https://f93da235-a-62cb3a1a-s-sites.googlegroups.com/site/prologsite/prolog-problems/1/solutions-1/p1_14.pl?attachauth=ANoY7cpzpB_34qregoveJuxUjzZPa0aBRobo5LpFHmB1U6UIHKJkihCRk6ljcSdmDfVJKrkXfpkYlNHBogt5KUw1sq0HM28HNhkmCMpdDt0By_v-RYg1jbtCUzD5I3u6gpe8BwigJluZgDbDqHoGJ5aqCnKiiQ9aNh8SQIfsxuOpf0gdOxC0n1CewG3TYskJoejxP-YJ_DdX5bUDNfaYGx6b84qUDhYTWkKqrGq6LC3dpu-9cgaTQ_ccuQFrhk6uCbuOf1DB8RpV&amp;attredirects=0&amp;d=1" rel="nofollow" dir="ltr" target="_blank">Download</a></SPAN></td>
+<td class="td-desc filecabinet-desc" tabindex="0" dir=""> </td>
+<td class="td-size" data-val="201">1k</td>
+<td class="td-rev" data-val="1">v. 1  </td>
+<td class="td-time" data-val="1264877039303">
+<span dir="ltr">Jan 30, 2010, 10:43 AM</span>
+</td>
+<td class="td-user">Werner Hett</td>
+</tr><tr id="JOT_FILECAB_container_wuid:gx:2abb08bfd292adf6">
+<td class="td-select"><input class="filecabinet-checkbox" type="checkbox" aria-labelledby="JOT_FILECAB_label_wuid:gx:2abb08bfd292adf6" /></td>
+<td class="td-icon" style="line-height:20px">
+<div class="sites-translucent sites-symbol" aria-label="Arquivo" title="Arquivo">ċ</div>
+</td>
+<td class="td-file"><span class="td-value" id="JOT_FILECAB_label_wuid:gx:2abb08bfd292adf6" aria-hidden="true">p1_15.pl</span><br /><SPAN style="word-spacing: 3px;"><a href="https://f93da235-a-62cb3a1a-s-sites.googlegroups.com/site/prologsite/prolog-problems/1/solutions-1/p1_15.pl?attachauth=ANoY7cozvhhutl4cDmkj__cNI7_d4Ki9WFCHyOSvKUwYQlEAMwidLieJ_s6QnLKuqP-JM8H3RD0PLXADO2-ZqDeACFX7RyQ-LWuFXXbQ8ptFF3YSP7yfDEtlVUAzXd2WiZO48gGJs5sH5rreV2EY4xsXCrHKlZNV6PghkBvb7dQ2EI49oFKymFgkM85QYtIX3bTgpkW1Zae4_S8sFJcCg2ORp_XpM1uuiPhxi6GblLXyhFIOdovgcfYvqSS5-H8e_rYx08ofE2z7&amp;attredirects=0&amp;d=1" rel="nofollow" dir="ltr" target="_blank">Download</a></SPAN></td>
+<td class="td-desc filecabinet-desc" tabindex="0" dir=""> </td>
+<td class="td-size" data-val="538">1k</td>
+<td class="td-rev" data-val="1">v. 1  </td>
+<td class="td-time" data-val="1264877052508">
+<span dir="ltr">Jan 30, 2010, 10:44 AM</span>
+</td>
+<td class="td-user">Werner Hett</td>
+</tr><tr id="JOT_FILECAB_container_wuid:gx:47a7aa115dfa4ef3">
+<td class="td-select"><input class="filecabinet-checkbox" type="checkbox" aria-labelledby="JOT_FILECAB_label_wuid:gx:47a7aa115dfa4ef3" /></td>
+<td class="td-icon" style="line-height:20px">
+<div class="sites-translucent sites-symbol" aria-label="Arquivo" title="Arquivo">ċ</div>
+</td>
+<td class="td-file"><span class="td-value" id="JOT_FILECAB_label_wuid:gx:47a7aa115dfa4ef3" aria-hidden="true">p1_16.pl</span><br /><SPAN style="word-spacing: 3px;"><a href="https://f93da235-a-62cb3a1a-s-sites.googlegroups.com/site/prologsite/prolog-problems/1/solutions-1/p1_16.pl?attachauth=ANoY7couxckCAmYzirKfJSMQfU_enn5jLjln6NZeh3RShoMquMBppusm-dyzwk-7tc-9xeSomRjbXuvLzTHpKh-XA5mGmPXCse21EI4D-DYxIExEwCgMPJjK6AXUDRgUckdikaJWB5hBTbZZIfKPg-nFmYg5EMdfkx1PNaPFSlQ-uN1QAINkxfiX3uF7U7Qx2m5Oaxtb0ANWpv4n9ai47lCIYX1o-ZC8mg-lacAJhfHZRWYtA4uxJsGZe5tTNgI2V2jx-dxcxXcS&amp;attredirects=0&amp;d=1" rel="nofollow" dir="ltr" target="_blank">Download</a></SPAN></td>
+<td class="td-desc filecabinet-desc" tabindex="0" dir=""> </td>
+<td class="td-size" data-val="522">1k</td>
+<td class="td-rev" data-val="1">v. 1  </td>
+<td class="td-time" data-val="1264877082726">
+<span dir="ltr">Jan 30, 2010, 10:44 AM</span>
+</td>
+<td class="td-user">Werner Hett</td>
+</tr><tr id="JOT_FILECAB_container_wuid:gx:239df41ac4ab3ce0">
+<td class="td-select"><input class="filecabinet-checkbox" type="checkbox" aria-labelledby="JOT_FILECAB_label_wuid:gx:239df41ac4ab3ce0" /></td>
+<td class="td-icon" style="line-height:20px">
+<div class="sites-translucent sites-symbol" aria-label="Arquivo" title="Arquivo">ċ</div>
+</td>
+<td class="td-file"><span class="td-value" id="JOT_FILECAB_label_wuid:gx:239df41ac4ab3ce0" aria-hidden="true">p1_17.pl</span><br /><SPAN style="word-spacing: 3px;"><a href="https://f93da235-a-62cb3a1a-s-sites.googlegroups.com/site/prologsite/prolog-problems/1/solutions-1/p1_17.pl?attachauth=ANoY7cq18RNAct-pcpXHx8R7uDyUkZukZZZ8lxZUW1YdbXArUtWKkh3a2takkSIfVuCMCQ7bf4jVSx_HZB-GxBAkRHzD_-csOyxTe1FRX02poDC3aAOe7tmj8R2-5Q68HUOG0TNJSowEBwgy7rSSFr7vCNAl60JNxmMuC5HqseJsH6E3rVNWa4Av_9Md9tqjF0XrVkoWK0c_CAum60sPClknsUbuhja-ac12sRqJGwCYtPmq_ZtBPA5wtEaiucD_GcDTdX-E6Rgb&amp;attredirects=0&amp;d=1" rel="nofollow" dir="ltr" target="_blank">Download</a></SPAN></td>
+<td class="td-desc filecabinet-desc" tabindex="0" dir=""> </td>
+<td class="td-size" data-val="307">1k</td>
+<td class="td-rev" data-val="1">v. 1  </td>
+<td class="td-time" data-val="1264877100056">
+<span dir="ltr">Jan 30, 2010, 10:45 AM</span>
+</td>
+<td class="td-user">Werner Hett</td>
+</tr><tr id="JOT_FILECAB_container_wuid:gx:2c52e86cd9a63867">
+<td class="td-select"><input class="filecabinet-checkbox" type="checkbox" aria-labelledby="JOT_FILECAB_label_wuid:gx:2c52e86cd9a63867" /></td>
+<td class="td-icon" style="line-height:20px">
+<div class="sites-translucent sites-symbol" aria-label="Arquivo" title="Arquivo">ċ</div>
+</td>
+<td class="td-file"><span class="td-value" id="JOT_FILECAB_label_wuid:gx:2c52e86cd9a63867" aria-hidden="true">p1_18.pl</span><br /><SPAN style="word-spacing: 3px;"><a href="https://f93da235-a-62cb3a1a-s-sites.googlegroups.com/site/prologsite/prolog-problems/1/solutions-1/p1_18.pl?attachauth=ANoY7cq9t1GmvT_YbHmFeklPKCftQO4meBRvw1QotWoBud_CuMpljNb62u1frbZbW8GCLVBvoHA5HAjoc1_6E7EVnevWUuqpFaxc-P2PMdRMdRIXfnv2KbfFfuVZQllholtuzAId1crRiLUyFtQJ91RYB6by4h1wSscZMFUIfPha_KvXJlqP_qERAf85Rg1jbAWLl6aBJTJpKCuX-14Aeds4sGaAQfeOGwDk6c2C6GWlBkWnrK4IjQ9JwnH3lkjkXuqlFgytfpIJ&amp;attredirects=0&amp;d=1" rel="nofollow" dir="ltr" target="_blank">Download</a></SPAN></td>
+<td class="td-desc filecabinet-desc" tabindex="0" dir=""> </td>
+<td class="td-size" data-val="381">1k</td>
+<td class="td-rev" data-val="1">v. 1  </td>
+<td class="td-time" data-val="1264877116180">
+<span dir="ltr">Jan 30, 2010, 10:45 AM</span>
+</td>
+<td class="td-user">Werner Hett</td>
+</tr><tr id="JOT_FILECAB_container_wuid:gx:5b8e161c9128cb8a">
+<td class="td-select"><input class="filecabinet-checkbox" type="checkbox" aria-labelledby="JOT_FILECAB_label_wuid:gx:5b8e161c9128cb8a" /></td>
+<td class="td-icon" style="line-height:20px">
+<div class="sites-translucent sites-symbol" aria-label="Arquivo" title="Arquivo">ċ</div>
+</td>
+<td class="td-file"><span class="td-value" id="JOT_FILECAB_label_wuid:gx:5b8e161c9128cb8a" aria-hidden="true">p1_19.pl</span><br /><SPAN style="word-spacing: 3px;"><a href="https://docs.google.com/viewer?a=v&amp;pid=sites&amp;srcid=ZGVmYXVsdGRvbWFpbnxwcm9sb2dzaXRlfGd4OjViOGUxNjFjOTEyOGNiOGE" rel="nofollow" dir="ltr" target="_blank">View</a> <a href="https://f93da235-a-62cb3a1a-s-sites.googlegroups.com/site/prologsite/prolog-problems/1/solutions-1/p1_19.pl?attachauth=ANoY7cphHqo5I6CO3JFcJBbZeCcVk2xdkYgXxg3eoXJUg0BdLrk-O4TC0EbGROTLdHs-5ZIW4Fyz8RW7LIYfWB8tKklyIJH95vflFMsAiKlsIgYoZlaw_ZtegnlxjD7kKjNQ8hq1cnhoJ0Ly-Erw63Cf4dPZ7qpd-kieyj44yer1wEqnz0p0LTNc_dmFdi2Zwb1Q8vFqq3PsH8upVlkRZidfxt8lxCE40jOVGDf9X-tfgSh_7iyZIBn1WvVo9Lr8jGUCxBrIn9zO&amp;attredirects=0&amp;d=1" rel="nofollow" dir="ltr" target="_blank">Download</a></SPAN></td>
+<td class="td-desc filecabinet-desc" tabindex="0" dir=""> </td>
+<td class="td-size" data-val="483">1k</td>
+<td class="td-rev" data-val="1">v. 1  </td>
+<td class="td-time" data-val="1350684404538">
+<span dir="ltr">Oct 19, 2012, 3:06 PM</span>
+</td>
+<td class="td-user">Werner Hett</td>
+</tr><tr id="JOT_FILECAB_container_wuid:gx:6731a001a4c1541f">
+<td class="td-select"><input class="filecabinet-checkbox" type="checkbox" aria-labelledby="JOT_FILECAB_label_wuid:gx:6731a001a4c1541f" /></td>
+<td class="td-icon" style="line-height:20px">
+<div class="sites-translucent sites-symbol" aria-label="Arquivo" title="Arquivo">ċ</div>
+</td>
+<td class="td-file"><span class="td-value" id="JOT_FILECAB_label_wuid:gx:6731a001a4c1541f" aria-hidden="true">p1_20.pl</span><br /><SPAN style="word-spacing: 3px;"><a href="https://f93da235-a-62cb3a1a-s-sites.googlegroups.com/site/prologsite/prolog-problems/1/solutions-1/p1_20.pl?attachauth=ANoY7cq2a_W33AtKyOJ-2KKcHkikOI-2dVe4bC5cv1wm2uMeIAtH5EZKoLensE3mZCu00hSbCDZmrLquRr1Ps-XTXSmU5mHGMQ6Mbnp7Wpqzo2TOjHZDb6dSNbcTxeVAYPG5ebaC4vwZpkpB5fFWznFJZs29zkijDTKeD3GV54XXeD-acdqCvRvoQesmkL3-LuQgRWvasDMJbP1IYEIe88pbnnu_SNxtrBPREN80GrHIysqiFMOYfPA1oyKz63mkWyK3x8F1Zr-x&amp;attredirects=0&amp;d=1" rel="nofollow" dir="ltr" target="_blank">Download</a></SPAN></td>
+<td class="td-desc filecabinet-desc" tabindex="0" dir=""> </td>
+<td class="td-size" data-val="388">1k</td>
+<td class="td-rev" data-val="1">v. 1  </td>
+<td class="td-time" data-val="1264877157033">
+<span dir="ltr">Jan 30, 2010, 10:45 AM</span>
+</td>
+<td class="td-user">Werner Hett</td>
+</tr><tr id="JOT_FILECAB_container_wuid:gx:14e7212ab63b5dae">
+<td class="td-select"><input class="filecabinet-checkbox" type="checkbox" aria-labelledby="JOT_FILECAB_label_wuid:gx:14e7212ab63b5dae" /></td>
+<td class="td-icon" style="line-height:20px">
+<div class="sites-translucent sites-symbol" aria-label="Arquivo" title="Arquivo">ċ</div>
+</td>
+<td class="td-file"><span class="td-value" id="JOT_FILECAB_label_wuid:gx:14e7212ab63b5dae" aria-hidden="true">p1_21.pl</span><br /><SPAN style="word-spacing: 3px;"><a href="https://docs.google.com/viewer?a=v&amp;pid=sites&amp;srcid=ZGVmYXVsdGRvbWFpbnxwcm9sb2dzaXRlfGd4OjE0ZTcyMTJhYjYzYjVkYWU" rel="nofollow" dir="ltr" target="_blank">View</a> <a href="https://f93da235-a-62cb3a1a-s-sites.googlegroups.com/site/prologsite/prolog-problems/1/solutions-1/p1_21.pl?attachauth=ANoY7cpGBeV0s-9DHDCNaoYc3uDODtnlHdGBvcWZgwgOIFebbESrOlKvtNpAhb9r23ztdbXj5WjMQe8EP6SysDFUJYMs8YArNa0ggdIGqW6eoEJ5fl1lImMbYQA_VCn8XoIThUEKBD4nJhRF7JPZ4Bb7MIUzergjfzxknOouIX_KFlEirWozmh0nvIe6p5Lki7s6EZVykoTaUJfj1rvsFcjUkH-kLk1hLBdldirz_snzA-0KmcJFHuvSunf3jUfG_b7OTPSdUGD6&amp;attredirects=0&amp;d=1" rel="nofollow" dir="ltr" target="_blank">Download</a></SPAN></td>
+<td class="td-desc filecabinet-desc" tabindex="0" dir=""> </td>
+<td class="td-size" data-val="351">1k</td>
+<td class="td-rev" data-val="1">v. 1  </td>
+<td class="td-time" data-val="1470086155037">
+<span dir="ltr">Aug 1, 2016, 2:15 PM</span>
+</td>
+<td class="td-user">Werner Hett</td>
+</tr><tr id="JOT_FILECAB_container_wuid:gx:3f34bd63f14144d7">
+<td class="td-select"><input class="filecabinet-checkbox" type="checkbox" aria-labelledby="JOT_FILECAB_label_wuid:gx:3f34bd63f14144d7" /></td>
+<td class="td-icon" style="line-height:20px">
+<div class="sites-translucent sites-symbol" aria-label="Arquivo" title="Arquivo">ċ</div>
+</td>
+<td class="td-file"><span class="td-value" id="JOT_FILECAB_label_wuid:gx:3f34bd63f14144d7" aria-hidden="true">p1_22.pl</span><br /><SPAN style="word-spacing: 3px;"><a href="https://f93da235-a-62cb3a1a-s-sites.googlegroups.com/site/prologsite/prolog-problems/1/solutions-1/p1_22.pl?attachauth=ANoY7coTZRxbukw8n9ZqyOVwepefa56aekQD5BVu-OOzLAuMka5fKID76NKmrNhSekm-fkCo6t7GNV8ECm95jNQhH8A2DNepJv8HNe2YHIWVV_py-KVOh5UVy6ff1QyMH9IbqDjdqls0gDW9SS4QhxPZZ2KZFJ32IaWDyQ5aalooihW5_RzOuzg8TkFtOY_GwsfxAAEpuj0j0VerDrJroy5cpkp8BdldC5nyMqD-HVXhKTYHSv2bOkohMF380ym-R6Aez-pUeMMQ&amp;attredirects=0&amp;d=1" rel="nofollow" dir="ltr" target="_blank">Download</a></SPAN></td>
+<td class="td-desc filecabinet-desc" tabindex="0" dir=""> </td>
+<td class="td-size" data-val="289">1k</td>
+<td class="td-rev" data-val="1">v. 1  </td>
+<td class="td-time" data-val="1264877182959">
+<span dir="ltr">Jan 30, 2010, 10:46 AM</span>
+</td>
+<td class="td-user">Werner Hett</td>
+</tr><tr id="JOT_FILECAB_container_wuid:gx:2f111b2982c463f3">
+<td class="td-select"><input class="filecabinet-checkbox" type="checkbox" aria-labelledby="JOT_FILECAB_label_wuid:gx:2f111b2982c463f3" /></td>
+<td class="td-icon" style="line-height:20px">
+<div class="sites-translucent sites-symbol" aria-label="Arquivo" title="Arquivo">ċ</div>
+</td>
+<td class="td-file"><span class="td-value" id="JOT_FILECAB_label_wuid:gx:2f111b2982c463f3" aria-hidden="true">p1_23.pl</span><br /><SPAN style="word-spacing: 3px;"><a href="https://f93da235-a-62cb3a1a-s-sites.googlegroups.com/site/prologsite/prolog-problems/1/solutions-1/p1_23.pl?attachauth=ANoY7cof_meVIG1TAlQLGAgem9cLHsU4f5plytTx5zRaci0M4o-WMrfSml9iScv89qhhg6Pun0G4MwPAkaGrE98QeXFSKGh3pb_ta78eqf59bXXC1plFh2vYiRMtKNUxkAiHy5-F_Ip9PFRK5L0KMJGB9yPcoN08yWEFG8F7gHQ39GwSAyTygKQMnytIU5jiJZNzFb0QdQEwJ38WA0J1ft3z3ep4Q_fmzEjgNKsKW8Vfka8G5qXfO3hBBdmBbCkPyQPVdkNPop2R&amp;attredirects=0&amp;d=1" rel="nofollow" dir="ltr" target="_blank">Download</a></SPAN></td>
+<td class="td-desc filecabinet-desc" tabindex="0" dir=""> </td>
+<td class="td-size" data-val="425">1k</td>
+<td class="td-rev" data-val="1">v. 1  </td>
+<td class="td-time" data-val="1264877197111">
+<span dir="ltr">Jan 30, 2010, 10:46 AM</span>
+</td>
+<td class="td-user">Werner Hett</td>
+</tr><tr id="JOT_FILECAB_container_wuid:gx:75a6778321e1589a">
+<td class="td-select"><input class="filecabinet-checkbox" type="checkbox" aria-labelledby="JOT_FILECAB_label_wuid:gx:75a6778321e1589a" /></td>
+<td class="td-icon" style="line-height:20px">
+<div class="sites-translucent sites-symbol" aria-label="Arquivo" title="Arquivo">ċ</div>
+</td>
+<td class="td-file"><span class="td-value" id="JOT_FILECAB_label_wuid:gx:75a6778321e1589a" aria-hidden="true">p1_24.pl</span><br /><SPAN style="word-spacing: 3px;"><a href="https://f93da235-a-62cb3a1a-s-sites.googlegroups.com/site/prologsite/prolog-problems/1/solutions-1/p1_24.pl?attachauth=ANoY7cprf-yhLQptpCgKqUk4qXETema-W39w5cbV7hX9wmhNr0Bc_9aYUdLD_2gycfMjyYKSrWlQt-5FygTqats6QGI8VdbT0zBMgGu8GCwFRNTrz0a9JT8q3bKBG0JzGxPo1UWqEkqvWtghg2-xxMwtLyxEDkCuYfOCPUDp_XQt6RwicFYLG5Q9Eq0AX7t3LomfHfKHQnAPzdaniQt8AEzSEitpRSfiNsHJLMTIp_ZNmVoGLdO9F82ruobDLmRe_B0lPO2SoXAl&amp;attredirects=0&amp;d=1" rel="nofollow" dir="ltr" target="_blank">Download</a></SPAN></td>
+<td class="td-desc filecabinet-desc" tabindex="0" dir=""> </td>
+<td class="td-size" data-val="335">1k</td>
+<td class="td-rev" data-val="1">v. 1  </td>
+<td class="td-time" data-val="1264877211125">
+<span dir="ltr">Jan 30, 2010, 10:46 AM</span>
+</td>
+<td class="td-user">Werner Hett</td>
+</tr><tr id="JOT_FILECAB_container_wuid:gx:15252cdfcfa54600">
+<td class="td-select"><input class="filecabinet-checkbox" type="checkbox" aria-labelledby="JOT_FILECAB_label_wuid:gx:15252cdfcfa54600" /></td>
+<td class="td-icon" style="line-height:20px">
+<div class="sites-translucent sites-symbol" aria-label="Arquivo" title="Arquivo">ċ</div>
+</td>
+<td class="td-file"><span class="td-value" id="JOT_FILECAB_label_wuid:gx:15252cdfcfa54600" aria-hidden="true">p1_25.pl</span><br /><SPAN style="word-spacing: 3px;"><a href="https://f93da235-a-62cb3a1a-s-sites.googlegroups.com/site/prologsite/prolog-problems/1/solutions-1/p1_25.pl?attachauth=ANoY7croYHphG1d0SZJU3XGV2clHs6hQjGqpBFcEaahcLF16I_Tv7rVu8_jG-Q8TPVxNIDrrCUo2JXUPHpqemCzfjGxEPsWpKbWDh9zkpSrs3n-0nJMtQaBzCUiLURIzMeJt9_O9iJYoMJ3nUaHWE9pGlFtMt256G-wDf8fQfp15eY2LzYjwC14EczKoIKqfKxwjbIV9-EfKQsMX1XwOwLwdnORm8J9Ltcbx6y7JNtXeV-ZcGMtvC8y5GSDviBf7ibTTuYz2hoyE&amp;attredirects=0&amp;d=1" rel="nofollow" dir="ltr" target="_blank">Download</a></SPAN></td>
+<td class="td-desc filecabinet-desc" tabindex="0" dir=""> </td>
+<td class="td-size" data-val="270">1k</td>
+<td class="td-rev" data-val="1">v. 1  </td>
+<td class="td-time" data-val="1264877223406">
+<span dir="ltr">Jan 30, 2010, 10:47 AM</span>
+</td>
+<td class="td-user">Werner Hett</td>
+</tr><tr id="JOT_FILECAB_container_wuid:gx:350ca6e2916fbf4c">
+<td class="td-select"><input class="filecabinet-checkbox" type="checkbox" aria-labelledby="JOT_FILECAB_label_wuid:gx:350ca6e2916fbf4c" /></td>
+<td class="td-icon" style="line-height:20px">
+<div class="sites-translucent sites-symbol" aria-label="Arquivo" title="Arquivo">ċ</div>
+</td>
+<td class="td-file"><span class="td-value" id="JOT_FILECAB_label_wuid:gx:350ca6e2916fbf4c" aria-hidden="true">p1_26.pl</span><br /><SPAN style="word-spacing: 3px;"><a href="https://f93da235-a-62cb3a1a-s-sites.googlegroups.com/site/prologsite/prolog-problems/1/solutions-1/p1_26.pl?attachauth=ANoY7cp9VSDsXPDIrsoquqPzcO9ia_NZ7OQpSJfOSjQX2iORVpS2vbvqlOkMqQwdmEhUyywb3Hjws82KbTsUY35NSrtuiHGWKgmxhuyiRB1YWDJH_6XoPmmhI_Gu9nwT1W7Oe1eGMFlPYpwq2zVUcARTSVTsxUuLPIA9LbuzIFbMLXODDHyRUREMVdIXSFakLIQAGxn-oGzSJTkXfpb9CE1uv-Afs1LO3nicAS4RbQjplugIuRhj1RxjWfmmdS4-9BbA-Dkp9WP7&amp;attredirects=0&amp;d=1" rel="nofollow" dir="ltr" target="_blank">Download</a></SPAN></td>
+<td class="td-desc filecabinet-desc" tabindex="0" dir=""> </td>
+<td class="td-size" data-val="409">1k</td>
+<td class="td-rev" data-val="1">v. 1  </td>
+<td class="td-time" data-val="1264877255796">
+<span dir="ltr">Jan 30, 2010, 10:47 AM</span>
+</td>
+<td class="td-user">Werner Hett</td>
+</tr><tr id="JOT_FILECAB_container_wuid:gx:f0e89e22931746b">
+<td class="td-select"><input class="filecabinet-checkbox" type="checkbox" aria-labelledby="JOT_FILECAB_label_wuid:gx:f0e89e22931746b" /></td>
+<td class="td-icon" style="line-height:20px">
+<div class="sites-translucent sites-symbol" aria-label="Arquivo" title="Arquivo">ċ</div>
+</td>
+<td class="td-file"><span class="td-value" id="JOT_FILECAB_label_wuid:gx:f0e89e22931746b" aria-hidden="true">p1_27.pl</span><br /><SPAN style="word-spacing: 3px;"><a href="https://docs.google.com/viewer?a=v&amp;pid=sites&amp;srcid=ZGVmYXVsdGRvbWFpbnxwcm9sb2dzaXRlfGd4OmYwZTg5ZTIyOTMxNzQ2Yg" rel="nofollow" dir="ltr" target="_blank">View</a> <a href="https://f93da235-a-62cb3a1a-s-sites.googlegroups.com/site/prologsite/prolog-problems/1/solutions-1/p1_27.pl?attachauth=ANoY7cq14xV4UgQ4G3OX4eBYmISdQyrJr_-WzF6sjaBDfHFh8pAATuRPoXkzS18f0g2-dDj-tPBe9tocQz7oD1BeoO6zMLAoFlo7Jh3iFangsD8P1lKJYjurtizMTePhUsZlQL0gyy-lum9rTghhdEYj6D154PAuftu4osPWPolGNjpB06XUMizXMTEXHQfM-mz6de0J_h_JJICjsdaHf0hbHUgFDW0Q90Pf7XXBzXLzfkA90sUkvHdcrPW6JdNTCuJUmVLMy3-c&amp;attredirects=0&amp;d=1" rel="nofollow" dir="ltr" target="_blank">Download</a></SPAN></td>
+<td class="td-desc filecabinet-desc" tabindex="0" dir=""> </td>
+<td class="td-size" data-val="1095">1k</td>
+<td class="td-rev" data-val="1">v. 1  </td>
+<td class="td-time" data-val="1470087405261">
+<span dir="ltr">Aug 1, 2016, 2:36 PM</span>
+</td>
+<td class="td-user">Werner Hett</td>
+</tr><tr id="JOT_FILECAB_container_wuid:gx:6361fb5bcfacb332">
+<td class="td-select"><input class="filecabinet-checkbox" type="checkbox" aria-labelledby="JOT_FILECAB_label_wuid:gx:6361fb5bcfacb332" /></td>
+<td class="td-icon" style="line-height:20px">
+<div class="sites-translucent sites-symbol" aria-label="Arquivo" title="Arquivo">ċ</div>
+</td>
+<td class="td-file"><span class="td-value" id="JOT_FILECAB_label_wuid:gx:6361fb5bcfacb332" aria-hidden="true">p1_28.pl</span><br /><SPAN style="word-spacing: 3px;"><a href="https://docs.google.com/viewer?a=v&amp;pid=sites&amp;srcid=ZGVmYXVsdGRvbWFpbnxwcm9sb2dzaXRlfGd4OjYzNjFmYjViY2ZhY2IzMzI" rel="nofollow" dir="ltr" target="_blank">View</a> <a href="https://f93da235-a-62cb3a1a-s-sites.googlegroups.com/site/prologsite/prolog-problems/1/solutions-1/p1_28.pl?attachauth=ANoY7cpDKwYQBIpB8hRFbDHQ7SSodyR0LTNcu4Y1rubzX7u1eXzQVZ_dXuPG5Po15f1wVwW4VMSUeT2UNkiW3bTqD1KJN7UpTHHZAdW7C-0vDkY4H1z81sTkL7I0JQ2eU3Yt0Wfnu47bqU_7xDsgJ5_cpRBwuTAXEYchZzc4z-3YMuuNQ6XD7alI-YwXKoLH_mB9VyQ65oxnB_5nKHw7oh-Whiu_S2gsdeTlhjbEqUI79kFfLDB7do9WKyEUmG6XcRP_c9-jmCgQ&amp;attredirects=0&amp;d=1" rel="nofollow" dir="ltr" target="_blank">Download</a></SPAN></td>
+<td class="td-desc filecabinet-desc" tabindex="0" dir=""> </td>
+<td class="td-size" data-val="2536">2k</td>
+<td class="td-rev" data-val="1">v. 1  </td>
+<td class="td-time" data-val="1470087526512">
+<span dir="ltr">Aug 1, 2016, 2:38 PM</span>
+</td>
+<td class="td-user">Werner Hett</td>
+</tr></tbody>
+</table>
+</div>
+</div>
+</div> 
+<div id="sites-canvas-bottom-panel">
+<div id="sites-attachments-container">
+</div>
+<a xmlns="http://www.w3.org/1999/xhtml" name="page-comments"></a>
+<div xmlns="http://www.w3.org/1999/xhtml" id="COMP_page-comments"><div class="sites-comment-docos-wrapper"><div class="sites-comment-docos"><div class="sites-comment-docos-background"></div><div class="sites-comment-docos-header"><div class="sites-comment-docos-header-title">Comentários</div></div><div id="sites-comment-docos-pane" class="sites-comment-docos-pane"></div></div></div></div>
+</div>
+</div> 
+</td> 
+</tr>
+</table> 
+</div> 
+</div> 
+<div id="sites-chrome-footer-wrapper">
+<div id="sites-chrome-footer-wrapper-inside">
+<div id="sites-chrome-footer">
+</div>
+</div>
+</div>
+</div> 
+</div> 
+<div id="sites-chrome-adminfooter-container">
+<div xmlns="http://www.w3.org/1999/xhtml" class="sites-adminfooter" role="navigation"><p><a class="sites-system-link" href="https://accounts.google.com/ServiceLogin?continue=https://sites.google.com/site/prologsite/prolog-problems/1/solutions-1&amp;service=jotspot">Fazer login</a><span aria-hidden="true">|</span><a class="sites-system-link" href="../../system/app/pages/reportAbuse.html" target="_blank">Denunciar abuso</a><span aria-hidden="true">|</span><a class="sites-system-link" href="javascript:;" onclick="window.open(webspace.printUrl)">Imprimir página</a><span aria-hidden="true">|</span><span class="sites-system-link">Tecnologia</span> <b class="powered-by"><a href="http://sites.google.com/site">Google Sites</a></b></p></div>
+</div>
+</div> 
+</div> 
+<script xmlns="http://www.w3.org/1999/xhtml" type="text/javascript">
+    window.jstiming.load.tick('sjl');
+  </script>
+<script xmlns="http://www.w3.org/1999/xhtml" src="../../../../../ssl.gstatic.com/sites/p/954e25/system/js/jot_min_filecabinet_view__en.js"></script>
+<script xmlns="http://www.w3.org/1999/xhtml" type="text/javascript">
+                JOT_postEvent('moduleLoad');
+              </script>
+<script xmlns="http://www.w3.org/1999/xhtml" type="text/javascript">
+    window.jstiming.load.tick('jl');
+  </script>
+<script xmlns="http://www.w3.org/1999/xhtml" type="text/javascript">
+                    sites.Searchbox.initialize(
+                        'sites-searchbox-search-button',
+                        {"object":[]}['object'],
+                        'search-site',
+                        {"label":"Configure search options...","url":"/site/prologsite/system/app/pages/admin/settings"});
+                  </script>
+<script xmlns="http://www.w3.org/1999/xhtml" type="text/javascript">
+      gsites.HoverPopupMenu.createSiteDropdownMenus('sites-header-nav-dropdown', false);
+    </script>
+<script xmlns="http://www.w3.org/1999/xhtml" type="text/javascript" defer="true">
+            JOT_setupNav("2bd", "Navigation", true);
+            JOT_addListener('titleChange', 'JOT_NAVIGATION_titleChange', 'COMP_2bd');
+          </script>
+<script xmlns="http://www.w3.org/1999/xhtml" type="text/javascript">
+              new sites.CommentPane('//docs.google.com/comments/d/AAHRpnXuLB3OTFb-t8_y-6GSB51YnJhkNH0eN3D5ptwT5idCQ_6sY7tJmWfaxZJcfR-w2Hy33me5mARRznSlHxUm2yyr7G2uUry557KlU59k1yhPRt6EmfZAATPUCTcaLO6cMINeJx237/api/js?anon=true',
+                  false, false);
+            </script>
+<script xmlns="http://www.w3.org/1999/xhtml" type="text/javascript">
+  setTimeout(function() {
+    var fingerprint = gsites.date.TimeZone.getFingerprint([1109635200000, 1128902400000, 1130657000000, 1143333000000, 1143806400000, 1145000000000, 1146380000000, 1152489600000, 1159800000000, 1159500000000, 1162095000000, 1162075000000, 1162105500000]);
+    gsites.Xhr.send('../../_/tz.html', null, null, 'GET', null, null, { afjstz: fingerprint });
+  }, 500);
+</script>
+<script xmlns="http://www.w3.org/1999/xhtml">
+                    window.onload = function() {
+                      if (false) {
+                        JOT_setMobilePreview();
+                      }
+                      var loadTimer = window.jstiming.load;
+                      loadTimer.tick("ol");
+                      loadTimer["name"] = "load," + webspace.page.type + ",user_page";
+                      window.jstiming.report(loadTimer, {}, 'https://gg.google.com/csi');
+                    }
+                  </script>
+<script xmlns="http://www.w3.org/1999/xhtml" type="text/javascript">
+        JOT_insertAnalyticsCode(false,
+            false);
+      </script>
+<script xmlns="http://www.w3.org/1999/xhtml" type="text/javascript">
+    var maestroRunner = new gsites.pages.view.SitesMaestroRunner(
+        webspace, "en");
+    maestroRunner.initListeners();
+    maestroRunner.installEditRender();
+  </script>
+<script xmlns="http://www.w3.org/1999/xhtml">
+        JOT_insertTranslateCode('pt_BR', 'en');
+      </script>
+<script xmlns="http://www.w3.org/1999/xhtml" type="text/javascript" defer="true">
+  //<![CDATA[
+    // Decorate any fastUI buttons on the page with a class of 'goog-button'.
+    if (webspace.user.hasWriteAccess) {
+      JOT_decorateButtons();
+    }
+
+    // Fires delayed events.
+    (function() {
+      JOT_fullyLoaded = true;
+      var delayedEvents = JOT_delayedEvents;
+      for (var x = 0; x < delayedEvents.length; x++) {
+        var event = delayedEvents[x];
+        JOT_postEvent(event.eventName, event.eventSrc, event.payload);
+      }
+      JOT_delayedEvents = null;
+      JOT_postEvent('pageLoaded');
+    })();
+  //]]>
+</script>
+<script xmlns="http://www.w3.org/1999/xhtml" type="text/javascript">
+    JOT_postEvent('decorateGvizCharts');
+  </script>
+<script type="text/javascript">
+          JOT_setupPostRenderingManager();
+        </script>
+<script type="text/javascript">
+          JOT_postEvent('renderPlus', null, 'sites-chrome-main');
+        </script>
+<script type="text/javascript">
+          sites.codeembed.init();
+        </script>
+<div id="server-timer-div" style="display:none"> </div>
+<script type="text/javascript">
+          window.jstiming.load.tick('render');
+          JOT_postEvent('usercontentrendered', this);
+        </script>
+</body>
+
+<!-- Mirrored from sites.google.com/site/prologsite/prolog-problems/1/solutions-1 by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 12 Sep 2022 18:37:59 GMT -->
+</html>

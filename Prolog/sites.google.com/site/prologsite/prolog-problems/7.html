@@ -1,0 +1,426 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" itemscope="" itemtype="http://schema.org/WebPage">
+
+<!-- Mirrored from sites.google.com/site/prologsite/prolog-problems/7 by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 12 Sep 2022 18:37:33 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="chrome=1" />
+<script type="text/javascript">/* Copyright 2008 Google. */ (function() { /*
+
+Copyright The Closure Library Authors.
+SPDX-License-Identifier: Apache-2.0
+*/
+(function(){function e(g){this.t={};this.tick=function(h,k,f){this.t[h]=[void 0!=f?f:(new Date).getTime(),k];if(void 0==f)try{window.console.timeStamp("CSI/"+h)}catch(m){}};this.getStartTickTime=function(){return this.t.start[0]};this.tick("start",null,g)}var a;if(window.performance)var d=(a=window.performance.timing)&&a.responseStart;var l=0<d?new e(d):new e;window.jstiming={Timer:e,load:l};if(a){var b=a.navigationStart;0<b&&d>=b&&(window.jstiming.srt=d-b)}if(a){var c=window.jstiming.load;0<b&&d>=
+b&&(c.tick("_wtsrt",void 0,b),c.tick("wtsrt_","_wtsrt",d),c.tick("tbsd_","wtsrt_"))}try{a=null,window.chrome&&window.chrome.csi&&(a=Math.floor(window.chrome.csi().pageT),c&&0<b&&(c.tick("_tbnd",void 0,window.chrome.csi().startE),c.tick("tbnd_","_tbnd",b))),null==a&&window.gtbExternal&&(a=window.gtbExternal.pageT()),null==a&&window.external&&(a=window.external.pageT,c&&0<b&&(c.tick("_tbnd",void 0,window.external.startE),c.tick("tbnd_","_tbnd",b))),a&&(window.jstiming.pt=a)}catch(g){}})(); })()
+</script>
+<link rel="shortcut icon" href="https://f93da235-a-62cb3a1a-s-sites.googlegroups.com/site/prologsite/favicon.ico?attachauth=ANoY7cq2Qe7SC69SulHNyg_hGTdHvEsMqPylnfIrkl5lDg0IdA1zHWjP-1U_qIc2BdYL8Y967JCbOSzlirg8OKg9pg8LaWwIkNqp7MCysIRz4USB0GkJftURvxMzw0qflG2P2Tqn7l19x2jLm3bCOrHsTcdhMGBA7cHI1x4JgjHES2yYLzkuNlch5XwiqlJG4DjknH3bG_QU-Lftq5rBff4o9ZHzAxFqxA%3D%3D&amp;attredirects=0" type="image/x-icon" />
+<link rel="apple-touch-icon" href="../../../../ssl.gstatic.com/sites/p/954e25/system/app/images/apple-touch-icon.png" type="image/png" />
+<script type="text/javascript">/* Copyright 2008 Google. */ (function() { function d(a){return document.getElementById(a)}window.byId=d;function g(a){return a.replace(/^\s+|\s+$/g,"")}window.trim=g;var h=[],k=0;window.JOT_addListener=function(a,b,c){var f=new String(k++);a={eventName:a,handler:b,compId:c,key:f};h.push(a);return f};window.JOT_removeListenerByKey=function(a){for(var b=0;b<h.length;b++)if(h[b].key==a){h.splice(b,1);break}};window.JOT_removeAllListenersForName=function(a){for(var b=0;b<h.length;b++)h[b].eventName==a&&h.splice(b,1)};
+window.JOT_postEvent=function(a,b,c){var f={eventName:a,eventSrc:b||{},payload:c||{}};if(window.JOT_fullyLoaded)for(b=h.length,c=0;c<b&&c<h.length;c++){var e=h[c];e&&e.eventName==a&&(f.listenerCompId=e.compId||"",(e="function"==typeof e.handler?e.handler:window[e.handler])&&e(f))}else window.JOT_delayedEvents.push({eventName:a,eventSrc:b,payload:c})};window.JOT_delayedEvents=[];window.JOT_fullyLoaded=!1;
+window.JOT_formatRelativeToNow=function(a,b){a=((new Date).getTime()-a)/6E4;if(1440<=a||0>a)return null;var c=0;60<=a&&(a/=60,c=2);2<=a&&c++;return b?window.JOT_siteRelTimeStrs[c].replace("__duration__",Math.floor(a)):window.JOT_userRelTimeStrs[c].replace("__duration__",Math.floor(a))}; })()
+</script>
+<script>
+
+  
+
+  var breadcrumbs = [{"path":"/site/prologsite/prolog-problems","deleted":false,"title":"Prolog Problems","dir":"ltr"},{"path":"/site/prologsite/prolog-problems/7","deleted":false,"title":"7. Miscellaneous","dir":"ltr"}];
+  var JOT_clearDotPath = '../../../../ssl.gstatic.com/sites/p/954e25/system/app/images/cleardot.gif';
+
+  
+  var JOT_userRelTimeStrs = ["um minuto atr\u00e1s","__duration__ minutos atr\u00e1s","uma hora atr\u00e1s","h\u00e1 __duration__ horas"];
+
+  
+  
+
+  
+
+  var webspace = {"gvizGstaticVersion":"current","enableAnalytics":false,"pageSharingId":"jotspot_page","codeembeds":{"outerIframeSrc":"https://www.gstatic.com/jotspot/embeds/code/0f08d42392f2000e7e3f3daf5b427a43/outer_iframe.html","innerIframeSrc":"https://634002822-jotspot-embeds.googleusercontent.com/code/8d87fa64604b2a11fae2ed06104c58d3/inner_iframe.html"},"enableUniversalAnalytics":false,"sharingPolicy":"OPENED","siteTitle":"Prolog Site","experiments":{"enableSubpagesGadgetInTakeout":true,"overrideDisableDomainEditing":false,"DisableSiteEditingFeature__disable_site_editing":true,"disableDomainEditing":true},"jot2atari":{"eligibility":"INELIGIBLE"},"onepickUrl":"https://docs.google.com/picker","adsensePublisherId":null,"features":{"moreMobileStyleImprovements":null,"subscriptionDataMigrationInProgress":null,"plusBadge":false},"configProperties":{"disableSiteEditing":null},"isPublic":true,"newSitesBaseUrl":"https://sites.google.com","isConsumer":true,"serverFlags":{"jot2AtariLearnMoreUrl":"https://support.google.com/sites/answer/7035197"},"domainAnalyticsAccountId":"","plusPageId":"","signInUrl":"https://accounts.google.com/AccountChooser?continue=https://sites.google.com/site/prologsite/prolog-problems/7&service=jotspot","analyticsAccountId":"","scottyUrl":"/_/upload","homePath":"/","siteNoticeUrlEnabled":null,"plusPageUrl":"","adsensePromoClickedOrSiteIneligible":true,"csiReportUri":"https://gg.google.com/csi","sharingId":"jotspot","termsUrl":"//www.google.com/intl/pt/policies/terms/","gvizVersion":1,"editorResources":{"sitelayout":["https://ssl.gstatic.com/sites/p/954e25/system/app/css/sitelayouteditor.css"],"text":["https://ssl.gstatic.com/sites/p/954e25/system/js/codemirror.js","../../../../ssl.gstatic.com/sites/p/954e25/system/app/css/codemirror_css.css","../../../../ssl.gstatic.com/sites/p/954e25/system/js/trog_edit__pt_br.js","../../../../ssl.gstatic.com/sites/p/954e25/system/app/css/trogedit.css","../_/rsrc/1662018100000/system/app/css/editor.css","../../../../ssl.gstatic.com/sites/p/954e25/system/app/css/codeeditor.css","/site/prologsite/_/rsrc/1662018100000/system/app/css/camelot/editor-jfk.css"]},"sharingUrlPrefix":"/_/sharing","isAdsenseEnabled":true,"domain":"defaultdomain","baseUri":"/site/prologsite","name":"prologsite","siteTemplateId":false,"siteNoticeRevision":null,"siteNoticeUrlAddress":null,"siteNoticeMessage":null,"page":{"isRtlLocale":false,"canDeleteWebspace":null,"isPageDraft":null,"parentPath":"/prolog-problems","parentWuid":"wuid:gx:759ecda8d60e3a1c","siteLocale":"en","timeZone":"America/Los_Angeles","type":"text","title":"7. Miscellaneous","locale":"pt_BR","wuid":"wuid:gx:362ab8a32fd7639a","revision":7,"path":"/prolog-problems/7","isSiteRtlLocale":false,"pageInheritsPermissions":null,"name":"7","canChangePath":true,"state":"","properties":{},"bidiEnabled":false,"currentTemplate":{"path":"/system/app/pagetemplates/text","title":"P\u00e1gina da web"}},"canPublishScriptToAnyone":true,"user":{"keyboardShortcuts":true,"sessionIndex":"","guest_":true,"displayNameOrEmail":"guest","userName":"guest","uid":"","renderMobile":false,"domain":"","namespace":"","hasWriteAccess":false,"namespaceUser":false,"primaryEmail":"guest","hasAdminAccess":false,"isGoogleAdmin":false},"gadgets":{"baseUri":"/site/prologsite/system/app/pages/gadgets"}};
+  webspace.page.breadcrumbs = breadcrumbs;
+
+  
+  var JOT_siteRelTimeStrs = ["a minute ago","__duration__ minutes ago","an hour ago","__duration__ hours ago"];
+
+</script>
+<script type="text/javascript">
+                window.jstiming.load.tick('scl');
+              </script>
+<meta name="title" content="7. Miscellaneous - Prolog Site" />
+<meta itemprop="name" content="7. Miscellaneous - Prolog Site" />
+<meta property="og:title" content="7. Miscellaneous - Prolog Site" />
+<meta name="description" content="This site hosts a Prolog course and a collection of Prolog problems" />
+<meta itemprop="description" content="This site hosts a Prolog course and a collection of Prolog problems" />
+<meta id="meta-tag-description" property="og:description" content="This site hosts a Prolog course and a collection of Prolog problems" />
+<style type="text/css">
+</style>
+<link rel="stylesheet" type="text/css" href="../../../../ssl.gstatic.com/sites/p/954e25/system/app/themes/microsport/standard-css-microsport-ltr-ltr.css" />
+<link rel="stylesheet" type="text/css" href="../_/rsrc/1662018100000/system/app/css/overlay6fb2.css?cb=microsport160goog-ws-left" />
+<link rel="stylesheet" type="text/css" href="../_/rsrc/1662018100000/system/app/css/camelot/allthemes-view.css" />
+<!--[if IE]>
+          <link rel="stylesheet" type="text/css" href="/site/prologsite/system/app/css/camelot/allthemes%2die.css" />
+        <![endif]-->
+<title>7. Miscellaneous - Prolog Site</title>
+<meta itemprop="image" content="https://sites.google.com/site/prologsite/_/rsrc/1264864357592/home/prolog-program.gif" />
+<meta property="og:image" content="https://sites.google.com/site/prologsite/_/rsrc/1264864357592/home/prolog-program.gif" />
+<script type="text/javascript">
+                window.jstiming.load.tick('cl');
+              </script>
+</head>
+<body xmlns="http://www.google.com/ns/jotspot" id="body" class=" en            ">
+<div id="sites-page-toolbar" class="sites-header-divider">
+<div xmlns="http://www.w3.org/1999/xhtml" id="sites-status" class="sites-status" style="display:none;"><div id="sites-notice" class="sites-notice" role="status" aria-live="assertive"> </div></div>
+</div>
+<div id="sites-chrome-everything-scrollbar">
+<div id="sites-chrome-everything" class="">
+<div id="sites-chrome-page-wrapper" style="direction: ltr">
+<div id="sites-chrome-page-wrapper-inside">
+<div xmlns="http://www.w3.org/1999/xhtml" id="sites-chrome-header-wrapper" style="">
+<table id="sites-chrome-header" class="sites-layout-hbox" cellspacing="0" style="">
+<tr class="sites-header-primary-row" id="sites-chrome-userheader">
+<td id="sites-header-title" class="" role="banner"><div class="sites-header-cell-buffer-wrapper"><h2><a href="../index.html" dir="ltr" id="sites-chrome-userheader-title">Prolog Site</a></h2></div></td><td class="sites-layout-searchbox  "><div class="sites-header-cell-buffer-wrapper"><form id="sites-searchbox-form" action="https://sites.google.com/site/prologsite/system/app/pages/search" role="search"><input type="hidden" id="sites-searchbox-scope" name="scope" value="search-site" /><input type="text" id="jot-ui-searchInput" name="q" size="20" value="" aria-label="Search this site" /><div id="sites-searchbox-button-set" class="goog-inline-block"><div role="button" id="sites-searchbox-search-button" class="goog-inline-block jfk-button jfk-button-standard" tabindex="0">Search this site</div></div></form></div></td>
+</tr>
+<tr class="sites-header-secondary-row" id="sites-chrome-horizontal-nav">
+<td colspan="2" id="sites-chrome-header-horizontal-nav-container" role="navigation">
+</td>
+</tr>
+</table>
+</div>
+<div id="sites-chrome-main-wrapper">
+<div id="sites-chrome-main-wrapper-inside">
+<table id="sites-chrome-main" class="sites-layout-hbox" cellspacing="0" cellpadding="{scmCellpadding}" border="0">
+<tr>
+<td id="sites-chrome-sidebar-left" class="sites-layout-sidebar-left initial" style="width:160px">
+<div xmlns="http://www.w3.org/1999/xhtml" id="COMP_2bd" class="sites-embed" role="navigation"><div class="sites-embed-content sites-sidebar-nav"><ul role="navigation" jotId="navList" class="has-expander"><li class="topLevel nav-first "><div dir="ltr" style="padding-left: 19px;"><a href="../home.html" jotId="wuid:gx:341db5a4ed00d1a" class="sites-navigation-link topLevel">Home</a></div></li><li class="topLevel "><div dir="ltr" style="padding-left: 19px;"><a href="../author.html" jotId="wuid:gx:3c9b6b2f3738ce0f" class="sites-navigation-link topLevel">Author</a></div></li><li class="topLevel parent " wuid="gx:62780df045cbf614"><div dir="ltr" style="padding-left: 0px;"><div class="expander"></div><a href="../prolog-course.html" jotId="wuid:gx:62780df045cbf614" class="sites-navigation-link topLevel">Prolog Course</a></div><ul role="navigation" class="has-expander"><li class=""><div dir="ltr" style="padding-left: 38px;"><a href="../prolog-course/a-first-glimpse.html" jotId="wuid:gx:4ff2cf368f81ba6" class="sites-navigation-link">1. A First Glimpse</a></div></li><li class=""><div dir="ltr" style="padding-left: 38px;"><a href="../prolog-course/2-synrtax-and-meaning.html" jotId="wuid:gx:5e15c00eb05443c6" class="sites-navigation-link">2. Syntax and Meaning</a></div></li></ul></li><li class="topLevel parent " wuid="gx:759ecda8d60e3a1c"><div dir="ltr" style="padding-left: 0px;"><div class="expander"></div><a href="../prolog-problems.html" jotId="wuid:gx:759ecda8d60e3a1c" class="sites-navigation-link topLevel">Prolog Problems</a></div><ul role="navigation" class="has-expander"><li class=""><div dir="ltr" style="padding-left: 38px;"><a href="1.html" jotId="wuid:gx:6727b95992b8c5a3" class="sites-navigation-link">1. Prolog Lists</a></div></li><li class=""><div dir="ltr" style="padding-left: 38px;"><a href="2.html" jotId="wuid:gx:104b11b6fc852518" class="sites-navigation-link">2. Arithmetic</a></div></li><li class=""><div dir="ltr" style="padding-left: 38px;"><a href="3.html" jotId="wuid:gx:533d8f77d8d861bd" class="sites-navigation-link">3. Logic and Codes</a></div></li><li class=""><div dir="ltr" style="padding-left: 38px;"><a href="4.html" jotId="wuid:gx:ea7f9e6f5084d18" class="sites-navigation-link">4. Binary Trees</a></div></li><li class=""><div dir="ltr" style="padding-left: 38px;"><a href="5.html" jotId="wuid:gx:16e5055a13f4667a" class="sites-navigation-link">5. Multiway Trees</a></div></li><li class=""><div dir="ltr" style="padding-left: 38px;"><a href="6.html" jotId="wuid:gx:145fd6273058e53b" class="sites-navigation-link">6. Graphs</a></div></li><li class=""><div class="current-bg" jotId="wuid:gx:362ab8a32fd7639a" dir="ltr" style="padding-left: 38px;">7. Miscellaneous</div></li></ul></li><li class="topLevel "><div dir="ltr" style="padding-left: 19px;"><a href="../system/app/pages/sitemap/hierarchy.html" jotId="wuid:gx:79311e19ba5ac357" class="sites-navigation-link topLevel">Sitemap</a></div></li></ul></div></div>
+</td>
+<td id="sites-canvas-wrapper">
+<div id="sites-canvas" role="main">
+<div id="goog-ws-editor-toolbar-container"> </div>
+<div xmlns="http://www.w3.org/1999/xhtml" id="title-crumbs" style="">
+<A href="../prolog-problems.html" dir="ltr">Prolog Problems</A>‎ &gt; ‎
+  </div>
+<h3 xmlns="http://www.w3.org/1999/xhtml" id="sites-page-title-header" style="" align="left">
+<span id="sites-page-title" dir="ltr" tabindex="-1" style="outline: none">7. Miscellaneous</span>
+</h3>
+<div id="sites-canvas-main" class="sites-canvas-main">
+<div id="sites-canvas-main-content">
+<table xmlns="http://www.w3.org/1999/xhtml" cellspacing="0" class="sites-layout-name-one-column sites-layout-hbox"><tbody><tr><td class="sites-layout-tile sites-tile-name-content-1"><div dir="ltr"><div style="margin:5px 10px 0pt 0pt;display:inline;float:left"><a href="7/solutions-7.html" rel="nofollow"><img border="0" src="../_/rsrc/1264864357592/home/prolog-program.gif" /></a></div>
+<br />
+<b>Solutions can be found 
+<a href="7/solutions-7.html" rel="nofollow">here</a>.<br />
+</b>
+<dl>
+<dt><br />
+</dt>
+<dt><b>7.01
+   (**) Eight queens problem</b></dt>
+<dd><br />
+</dd>
+<dd>This is a classical problem in computer science. The objective is to
+   place eight queens on a chessboard so that no two queens are attacking 
+   each other; i.e., no two queens are in the same row, the same column, 
+   or on the same diagonal.<br />
+<br />
+   Hint: Represent the positions of the queens as a list of numbers 1..N.
+   Example: [4,2,7,3,6,8,5,1] means that the queen in the first column
+   is in row 4, the queen in the second column is in row 2, etc.
+   Use the generate-and-test paradigm.<br />
+<br />
+</dd>
+<dt><b>7.02 
+   (**) Knight's tour</b></dt>
+<dd><br />
+</dd>
+<dd>Another famous problem is this one: How can a knight jump on
+   an NxN chessboard in such a way that it visits every square exactly
+   once?<br />
+<br />
+   Hints: Represent the squares by pairs of their coordinates of
+   the form X/Y, where both X and Y are integers between 1 and N.
+   (Note that '/' is just a convenient functor, not division!)
+   Define the relation jump(N,X/Y,U/V) to express the fact that a
+   knight can jump from X/Y to U/V on a NxN chessboard. And finally,
+   represent the solution of our problem as a list of N*N knight 
+   positions (the knight's tour).
+   <br />
+<br />
+</dd>
+<dt><b>7.03 
+   (***) Von Koch's conjecture</b>
+</dt>
+<dd>Several years ago I met a mathematician who was intrigued by
+   a problem for which he didn't know a solution. His name was Von Koch,
+   and I don't know whether the problem has been solved since.<br />
+<div style="margin:5px 10px 0pt 0pt;display:inline;float:left"><a href="../../../../f93da235-a-62cb3a1a-s-sites.googlegroups.com/site/prologsite/prolog-problems/7/p92a4d7d.gif?attredirects=0" imageanchor="1"><img border="0" src="../_/rsrc/1264955485190/prolog-problems/7/p92a.gif" /></a></div>
+<br />
+   Anyway, the puzzle goes like this: Given a tree with N nodes 
+   (and hence N-1 edges). Find a way to enumerate the nodes from 1 to N 
+   and, accordingly, the edges from 1 to N-1 in such a way, that for 
+   each edge K the difference of its node numbers equals to K. 
+   The conjecture is that this is always possible.<br />
+<br />
+   For small trees the problem is easy to solve by hand. However, for
+   larger trees, and 14 is already very large, it is extremely difficult 
+   to find a solution. And remember, we don't know for sure whether there is
+   always a solution!</dd>
+<dd><br />
+<div style="display:block;text-align:center;margin-right:auto;margin-left:auto"><a href="../../../../f93da235-a-62cb3a1a-s-sites.googlegroups.com/site/prologsite/prolog-problems/7/p92b06f0.gif?attredirects=0" imageanchor="1"><img border="0" src="../_/rsrc/1264955528417/prolog-problems/7/p92b.gif" /></a></div>
+<br />
+   Write a predicate that calculates a numbering scheme for a given
+   tree. What is the solution for the larger tree pictured above?<br />
+<br />
+</dd>
+<dt><b>7.04 
+   (***) An arithmetic puzzle</b></dt>
+<dd><br />
+</dd>
+<dd>Given a list of integer numbers, find a correct way of inserting 
+   arithmetic signs (operators) such that the result is a correct equation.
+   Example: With the list of numbers [2,3,5,7,11] we can form the
+   equations  2-3+5+7 = 11  or  2 = (3*5+7)/11 (and ten others!).<br />
+<br />
+</dd>
+<dt><b>7.05
+   (**) English number words</b></dt>
+<dd><br />
+</dd>
+<dd>On financial documents, like cheques, numbers must sometimes be 
+   written in full words. Example: 175 must be written as one-seven-five.
+   Write a predicate full_words/1 to print (non-negative) integer numbers
+   in full words.
+   <br />
+<br />
+</dd>
+<dt><b>7.06
+   (**) Syntax checker<br />
+</b></dt>
+<dd><br />
+</dd>
+<dd>
+<div style="display:block;text-align:left"><a href="../../../../f93da235-a-62cb3a1a-s-sites.googlegroups.com/site/prologsite/prolog-problems/7/p96f979.gif?attredirects=0" imageanchor="1"><img border="0" src="../_/rsrc/1264955783053/prolog-problems/7/p96.gif" /></a></div>
+</dd>
+<dd><br />
+</dd>
+<dd>In a certain programming language (Ada) identifiers are defined
+   by the syntax diagram (railroad chart) opposite.
+   Transform the syntax diagram into a system of syntax diagrams
+   which do not contain loops; i.e. which are purely recursive.
+   Using these modified diagrams, write a predicate identifier/1 that can
+   check whether or not a given string is a legal identifier.<br />
+<br />
+   % identifier(Str) :- Str is a legal identifier</dd>
+<dt><br />
+</dt>
+<dt><b>7.07
+  (**) Sudoku</b></dt>
+<dd><br />
+</dd>
+<dd>
+   Sudoku puzzles go like this:  
+   
+<pre>   Problem statement                 Solution<br /><br />    .  .  4 | 8  .  . | .  1  7	     9  3  4 | 8  2  5 | 6  1  7	     <br />            |         |                      |         |<br />    6  7  . | 9  .  . | .  .  .	     6  7  2 | 9  1  4 | 8  5  3<br />            |         |                      |         |<br />    5  .  8 | .  3  . | .  .  4      5  1  8 | 6  3  7 | 9  2  4<br />    --------+---------+--------      --------+---------+--------<br />    3  .  . | 7  4  . | 1  .  .      3  2  5 | 7  4  8 | 1  6  9<br />            |         |                      |         |<br />    .  6  9 | .  .  . | 7  8  .      4  6  9 | 1  5  3 | 7  8  2<br />            |         |                      |         |<br />    .  .  1 | .  6  9 | .  .  5      7  8  1 | 2  6  9 | 4  3  5<br />    --------+---------+--------      --------+---------+--------<br />    1  .  . | .  8  . | 3  .  6	     1  9  7 | 5  8  2 | 3  4  6<br />            |         |                      |         |<br />    .  .  . | .  .  6 | .  9  1	     8  5  3 | 4  7  6 | 2  9  1<br />            |         |                      |         |<br />    2  4  . | .  .  1 | 5  .  .      2  4  6 | 3  9  1 | 5  7  8<br />  </pre>
+   
+   Every spot in the puzzle belongs to a (horizontal) row and a (vertical)
+   column, as well as to one single 3x3 square (which we call "square" 
+   for short). At the beginning, some of the spots carry a single-digit
+   number between 1 and 9. The problem is to fill the missing spots with
+   digits in such a way that every number between 1 and 9 appears exactly
+   once in each row, in each column, and in each square.</dd>
+<dt><br />
+</dt>
+<dt><b>7.08 
+   (***) Nonograms</b></dt>
+<dd><br />
+</dd>
+<dd>
+   Around 1994, a certain kind of puzzles was very popular in England.
+   The "Sunday Telegraph" newspaper wrote: "Nonograms are puzzles from 
+   Japan and are currently published each week only in The Sunday 
+   Telegraph.  Simply use your logic and skill to complete the grid 
+   and reveal a picture or diagram." As a Prolog programmer, you are in 
+   a better situation: you can have your computer do the work!<br />
+<br />
+   The puzzle goes like this: Essentially, each row and column of a 
+   rectangular bitmap is annotated with the respective lengths of 
+   its distinct strings of occupied cells. The person who solves the puzzle 
+   must complete the bitmap given only these lengths.
+   
+<pre>          Problem statement:          Solution:<br /><br />          |_|_|_|_|_|_|_|_| 3         |_|X|X|X|_|_|_|_| 3           <br />          |_|_|_|_|_|_|_|_| 2 1       |X|X|_|X|_|_|_|_| 2 1         <br />          |_|_|_|_|_|_|_|_| 3 2       |_|X|X|X|_|_|X|X| 3 2         <br />          |_|_|_|_|_|_|_|_| 2 2       |_|_|X|X|_|_|X|X| 2 2         <br />          |_|_|_|_|_|_|_|_| 6         |_|_|X|X|X|X|X|X| 6           <br />          |_|_|_|_|_|_|_|_| 1 5       |X|_|X|X|X|X|X|_| 1 5         <br />          |_|_|_|_|_|_|_|_| 6         |X|X|X|X|X|X|_|_| 6           <br />          |_|_|_|_|_|_|_|_| 1         |_|_|_|_|X|_|_|_| 1           <br />          |_|_|_|_|_|_|_|_| 2         |_|_|_|X|X|_|_|_| 2           <br />           1 3 1 7 5 3 4 3             1 3 1 7 5 3 4 3              <br />           2 1 5 1                     2 1 5 1                      <br />   </pre>
+   For the example above, the problem can be stated as the two lists
+   [[3],[2,1],[3,2],[2,2],[6],[1,5],[6],[1],[2]] and 
+   [[1,2],[3,1],[1,5],[7,1],[5],[3],[4],[3]] which give the
+   "solid" lengths of the rows and columns, top-to-bottom and
+   left-to-right, respectively. Published puzzles are larger than this
+   example, e.g. 25 x 20, and apparently always have unique solutions.
+   <br />
+<br />
+</dd>
+<dt><b>7.09 
+   (***) Crossword puzzle</b></dt>
+<dd><br />
+</dd>
+<dd>
+   Given an empty (or almost empty) framework of a crossword puzzle and 
+   a set of words. The problem is to place the words into the framework.<br />
+<br />
+<div style="margin:5px auto 0pt;display:block;text-align:center"><a href="../../../../f93da235-a-62cb3a1a-s-sites.googlegroups.com/site/prologsite/prolog-problems/7/p998ac2.gif?attredirects=0" imageanchor="1"><img border="0" src="../_/rsrc/1264956149766/prolog-problems/7/p99.gif" /></a></div>
+</dd>
+<dd><br />
+</dd>
+<dd>The particular crossword puzzle is specified in a text file which
+   first lists the words (one word per line) in an arbitrary order. Then,
+   after an empty line, the crossword framework is defined. In this 
+   framework specification, an empty character location is represented
+   by a dot (.). In order to make the solution easier, character locations 
+   can also contain predefined character values. The puzzle opposite
+   is defined in the file p7_09a.dat, other examples
+   are p7_09b.dat and p7_09d.dat.
+   There is also an example of a puzzle (p7_09c.dat)
+   which does not have a solution.<br />
+<br />
+<i>Words</i> are strings (character lists) of at least two characters. 
+   A horizontal or vertical sequence of character places in the 
+   crossword puzzle framework is called a <i>site</i>. 
+   Our problem is to find a compatible way of placing words onto sites.
+   <br />
+<br />
+<b>Hints:</b> <br />
+</dd>
+<dd>1) The problem is not easy. You will need some time to 
+   thoroughly understand it. So, don't give up too early! And remember
+   that the objective is a clean solution, not just a quick-and-dirty hack!<br />
+   (2) Reading the data file is a tricky problem for which a solution 
+   is provided in the file
+   p7_09-readfile.pl. Use the predicate
+   read_lines/2.<br />
+   (3) For efficiency reasons it is important, at least for
+   larger puzzles, to sort the words and the sites in a particular order.
+   For this part of the problem, the solution of
+   1.28 may be very helpful.
+
+</dd>
+</dl></div></td></tr></tbody></table>
+</div> 
+</div> 
+<div id="sites-canvas-bottom-panel">
+<div xmlns="http://www.w3.org/1999/xhtml" id="COMP_page-subpages" class="sites-canvas-bottom-panel-wrapper" style="">
+<div class="sites-subpages">
+            Subpages <span id="subpages-total-number">(1):</span>
+<span>
+<a href="7/solutions-7.html" dir="ltr">Solutions-7</a>
+</span>
+</div>
+</div>
+<div id="sites-attachments-container">
+</div>
+</div>
+</div> 
+</td> 
+</tr>
+</table> 
+</div> 
+</div> 
+<div id="sites-chrome-footer-wrapper">
+<div id="sites-chrome-footer-wrapper-inside">
+<div id="sites-chrome-footer">
+</div>
+</div>
+</div>
+</div> 
+</div> 
+<div id="sites-chrome-adminfooter-container">
+<div xmlns="http://www.w3.org/1999/xhtml" class="sites-adminfooter" role="navigation"><p><a class="sites-system-link" href="https://accounts.google.com/ServiceLogin?continue=https://sites.google.com/site/prologsite/prolog-problems/7&amp;service=jotspot">Fazer login</a><span aria-hidden="true">|</span><a class="sites-system-link" href="../system/app/pages/reportAbuse.html" target="_blank">Denunciar abuso</a><span aria-hidden="true">|</span><a class="sites-system-link" href="javascript:;" onclick="window.open(webspace.printUrl)">Imprimir página</a><span aria-hidden="true">|</span><span class="sites-system-link">Tecnologia</span> <b class="powered-by"><a href="http://sites.google.com/site">Google Sites</a></b></p></div>
+</div>
+</div> 
+</div> 
+<script xmlns="http://www.w3.org/1999/xhtml" type="text/javascript">
+    window.jstiming.load.tick('sjl');
+  </script>
+<script xmlns="http://www.w3.org/1999/xhtml" src="../../../../ssl.gstatic.com/sites/p/954e25/system/js/jot_min_view__en.js"></script>
+<script xmlns="http://www.w3.org/1999/xhtml" type="text/javascript">
+    window.jstiming.load.tick('jl');
+  </script>
+<script xmlns="http://www.w3.org/1999/xhtml" type="text/javascript">
+                    sites.Searchbox.initialize(
+                        'sites-searchbox-search-button',
+                        {"object":[]}['object'],
+                        'search-site',
+                        {"label":"Configure search options...","url":"/site/prologsite/system/app/pages/admin/settings"});
+                  </script>
+<script xmlns="http://www.w3.org/1999/xhtml" type="text/javascript">
+      gsites.HoverPopupMenu.createSiteDropdownMenus('sites-header-nav-dropdown', false);
+    </script>
+<script xmlns="http://www.w3.org/1999/xhtml" type="text/javascript" defer="true">
+            JOT_setupNav("2bd", "Navigation", true);
+            JOT_addListener('titleChange', 'JOT_NAVIGATION_titleChange', 'COMP_2bd');
+          </script>
+<script xmlns="http://www.w3.org/1999/xhtml" type="text/javascript">
+  setTimeout(function() {
+    var fingerprint = gsites.date.TimeZone.getFingerprint([1109635200000, 1128902400000, 1130657000000, 1143333000000, 1143806400000, 1145000000000, 1146380000000, 1152489600000, 1159800000000, 1159500000000, 1162095000000, 1162075000000, 1162105500000]);
+    gsites.Xhr.send('../_/tz.html', null, null, 'GET', null, null, { afjstz: fingerprint });
+  }, 500);
+</script>
+<script xmlns="http://www.w3.org/1999/xhtml">
+                    window.onload = function() {
+                      if (false) {
+                        JOT_setMobilePreview();
+                      }
+                      var loadTimer = window.jstiming.load;
+                      loadTimer.tick("ol");
+                      loadTimer["name"] = "load," + webspace.page.type + ",user_page";
+                      window.jstiming.report(loadTimer, {}, 'https://gg.google.com/csi');
+                    }
+                  </script>
+<script xmlns="http://www.w3.org/1999/xhtml" type="text/javascript">
+        JOT_insertAnalyticsCode(false,
+            false);
+      </script>
+<script xmlns="http://www.w3.org/1999/xhtml" type="text/javascript">
+    var maestroRunner = new gsites.pages.view.SitesMaestroRunner(
+        webspace, "en");
+    maestroRunner.initListeners();
+    maestroRunner.installEditRender();
+  </script>
+<script xmlns="http://www.w3.org/1999/xhtml">
+        JOT_insertTranslateCode('pt_BR', 'en');
+      </script>
+<script xmlns="http://www.w3.org/1999/xhtml" type="text/javascript" defer="true">
+  //<![CDATA[
+    // Decorate any fastUI buttons on the page with a class of 'goog-button'.
+    if (webspace.user.hasWriteAccess) {
+      JOT_decorateButtons();
+    }
+
+    // Fires delayed events.
+    (function() {
+      JOT_fullyLoaded = true;
+      var delayedEvents = JOT_delayedEvents;
+      for (var x = 0; x < delayedEvents.length; x++) {
+        var event = delayedEvents[x];
+        JOT_postEvent(event.eventName, event.eventSrc, event.payload);
+      }
+      JOT_delayedEvents = null;
+      JOT_postEvent('pageLoaded');
+    })();
+  //]]>
+</script>
+<script xmlns="http://www.w3.org/1999/xhtml" type="text/javascript">
+    JOT_postEvent('decorateGvizCharts');
+  </script>
+<script type="text/javascript">
+          JOT_setupPostRenderingManager();
+        </script>
+<script type="text/javascript">
+          JOT_postEvent('renderPlus', null, 'sites-chrome-main');
+        </script>
+<script type="text/javascript">
+          sites.codeembed.init();
+        </script>
+<div id="server-timer-div" style="display:none"> </div>
+<script type="text/javascript">
+          window.jstiming.load.tick('render');
+          JOT_postEvent('usercontentrendered', this);
+        </script>
+</body>
+
+<!-- Mirrored from sites.google.com/site/prologsite/prolog-problems/7 by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 12 Sep 2022 18:37:41 GMT -->
+</html>
